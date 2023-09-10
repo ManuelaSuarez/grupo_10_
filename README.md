@@ -1,5 +1,7 @@
 La Tienda del 10
 
+Enlace a Trello: https://trello.com/b/V0ijtBOH/grupo10
+
 Descripción del e-commerce:
 
 Nuestro e-commerce se dedica principalmente a la venta de camisetas para los amantes del fútbol en Argentina y en todo el mundo. En La Tienda del 10 encontrarás una amplia y emocionante selección de camisetas de fútbol auténticas de tus equipos y jugadores favoritos, tanto de la Liga Argentina como de las ligas internacionales más emocionantes. 
