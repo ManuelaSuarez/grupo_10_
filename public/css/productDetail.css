@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-hamburguesa{
+    width: 10%;
+}
+
+.producto {
+    display: flex;
+}
+
+.imagenPrincipal {
+    width: 100%;
+}
