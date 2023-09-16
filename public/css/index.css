@@ -4,6 +4,101 @@
     box-sizing: border-box;
 }
 
-.menu-hamburguesa{
+.top-header{
+    display: flex;
+    align-items: center;
+}
+
+header form.barra-busqueda{
+    width: 50%;
+    display: flex;
+}
+
+header .barra-busqueda input{
+    background-color: #FFF;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    width: 90%;
+    height: 25px;
+    border: none;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    display: none;
+}
+
+
+header .barra-busqueda i{
+    background-color: #FFF;
     width: 10%;
+    min-width: 30px;
+    color: #666;
+    text-align: center;
+    padding-top: 3.5px;
+    border: none;
+    border-radius: 0px 3px 3px 0px;
+    display: none;
+}
+
+.menu-hamburguesa{
+    width: 20%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-lupa{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+}
+
+.menu-perfil{
+    display: none;
+}
+
+.navbar{
+    display: none;
+}
+
+header{
+    background-color: #63bbf2;
+}
+
+header div.logo-header{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+main section img{
+    width: 100%;
+}
+
+.fas.fa-ellipsis-h{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    top: -20px;
+}
+
+.flechas{
+    width: 100%;
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.marcas img{
+    height: 50px;
+}
+
+.marcas{
+    display: flex;
+    justify-content: space-around;
 }
