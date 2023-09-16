@@ -44,14 +44,23 @@
                     <p>Descripción del producto</p>
                     <!-- Menú desplegable -->
                     <label for="cantidad">Cantidad:</label>
-                    <select name="cantidad" id="cantidad">
+                    <button>-</button><span>1</span><button>+</button>
+                    <!-- Botón de cantidad -->
+                    <p>$******</p>
+                </div>
+                <div>
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
+                    <a href="#">Producto</a>
+                    <p>Descripción del producto</p>
+                    <label for="cantidad">Cantidad:</label>
+                    <button>-</button><span>1</span><button>+</button>
+                   <!-- <select name="cantidad" id="cantidad">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
-                    </select>
-                    <!-- Botón de cantidad -->
+                    </select>-->
                     <p>$******</p>
                 </div>
                 <div>
@@ -60,66 +69,43 @@
                     <p>Descripción del producto</p>
                     <!-- Menú desplegable -->
                     <label for="cantidad">Cantidad:</label>
-                    <select name="cantidad" id="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                    <button>-</button><span>1</span><button>+</button>
                     <!-- Botón de cantidad -->
                     <p>$******</p>
                 </div>
-                <div>
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <a href="#">Producto</a>
-                    <p>Descripción del producto</p>
-                    <!-- Menú desplegable -->
-                    <label for="cantidad">Cantidad:</label>
-                    <select name="cantidad" id="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                    <!-- Botón de cantidad -->
-                    <p>$******</p>
-                </div>
+                <i class="fas fa-arrow-down"></i>
             </section>
             <section class="envio">
                 <h3>Envío</h3>
-                <!-- Menú desplegable para país-provincia-ciudad -->
-                <label for="pais">País:</label>
-                <select name="pais" id="pais">
-                    <option value="Argentina">Argentina</option>
-                    <option value="Bolivia">Bolivia</option>
-                    <option value="Brasil">Brasil</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Paraguay">Paraguay</option>
-                    <option value="Perú">Perú</option>
-                    <option value="Uruguay">Uruguay</option>
-                </select>
                 <label for="provincia">Provincia:</label>
                 <select name="provincia" id="provincia">
-                    <option value="Buenos Aires">Argentina</option>
-                    <option value="Capital Federal">Bolivia</option>
-                    <option value="Córdoba">Brasil</option>
-                    <option value="Entre Ríos">Chile</option>
-                    <option value="Santa Fe">Paraguay</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Capital Federal">Capital Federal</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Entre Ríos">Entre Ríos</option>
+                    <option value="Santa Fe">Santa Fe</option>
                 </select>
-                <!-- Código postal -->
-                <div class="codigo-postal">
-                    <input type="search" name="barra-busqueda"/>
+                <div class="envio-barraBusqueda">
+                    <input placeholder="Ciudad" type="search" name="barra-busqueda"/>
+                </div>
+                <div class="envio-barraBusqueda">
+                    <input placeholder="Código postal" type="search" name="barra-busqueda"/>
                 </div>
                 <p>$******</p>
             </section>
             <section class="pago">
                 <h3>Formas de pago</h3>
-                <p><input type="checkbox">Tarjeta de crédito</p>
-                <p><input type="checkbox">Tarjeta de débito</p>
-                <p><input type="checkbox">Depósito o transferencia</p>
+                <div>
+                    <input type="radio" name="formaPago" id="credito">Tarjeta de crédito
+                    <input type="radio" name="formaPago" id="debito">Tarjeta de débito
+                    <input type="radio" name="formaPago" id="transferencia">Depósito o transferencia
+                </div>
+                <div>
+                    <h4>Monto total:</h4>
+                    <p>$*****</p>
+                </div>
             </section>
+            <button type="submit">Comprar</button>
         <footer>
             <div class="logo">
                 <img src="" alt="" />
