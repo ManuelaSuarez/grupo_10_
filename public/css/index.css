@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Roboto:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
 }
 
 .top-header{
@@ -78,6 +81,14 @@ main section img{
     width: 100%;
 }
 
+.slider{
+    height: 270px;
+}
+
+.banner-img{
+    height: 270px;
+}
+
 .fas.fa-ellipsis-h{
     display: flex;
     justify-content: center;
@@ -89,7 +100,7 @@ main section img{
 .flechas{
     width: 100%;
     position: relative;
-    top: -100px;
+    top: -160px;
     display: flex;
     justify-content: space-between;
 }
@@ -101,4 +112,65 @@ main section img{
 .marcas{
     display: flex;
     justify-content: space-around;
+}
+
+main section h3{
+    text-align: center;
+    margin-top: 5px;
+}
+
+main section p{
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: -5px;
+}
+
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 275px;
+}
+
+.productos img{
+    width: 80%;
+    border-radius: 40px;
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer{
+    height: 100%;
+    background-color: #333;
+}
+
+.logo-redes{
+    display: flex;
+}
+
+.logo-footer{
+    width: 50%;
+    position: relative;
+    left: 15px;
+    top: 5px;
+}
+
+.logo-footer img{
+    width: 30%;
+}
+
+.redes{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
 }
