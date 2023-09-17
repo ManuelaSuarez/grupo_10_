@@ -2,17 +2,162 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.menu-hamburguesa{
-    width: 10%;
+header {
+    background-color: #63bbf2;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.menu-hamburguesa {
+    width: 32%;
+    text-align: left;
+}
+
+.logo-header {
+    width: 32%;
+    text-align: center;
+}
+
+.menu-perfil {
+    display: none;
+}
+
+.barra-busqueda {
+    width: 32%;
+    text-align: right;
+}
+
+nav {
+    display: none;
+}
+
+main {
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    margin: auto;
 }
 
 .producto {
-    display: flex;
+    margin-bottom: 15%;
 }
 
 .imagenPrincipal {
     width: 100%;
-    height: 20%;
+    border-radius: 4%;
+}
+
+.imagenesMiniatura {
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+
+.imagenesMiniatura img {
+    width: 20%;
+    border-radius: 12%;
+}
+
+.producto h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.producto p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.talles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.talles button {
+    width: 40px;
+    height: 40px;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 10%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.producto a {
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+
+.botonesCompra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonesCompra button {
+    width: 45%;
+    height: 50px;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.informacionProducto {
+    padding: 2%;
+    border: 3px solid #fff;
+}
+
+.informacionProducto h4 {
+    text-align: center;
+}
+
+.informacionProducto ul {
+    margin-top: 1%;
+    list-style: none;
+    font-size: 80%;
+}
+
+footer {
+    display: flex;
+    padding: 5%;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    width: 40%;
+}
+
+.logo i {
+    font-size: 5rem;
+}
+
+.informacion-footer {
+    width: 60%;
+}
+
+.redes {
+    display: flex;
+    margin-bottom: 4%;
+}
+
+.redes a {
+    width: 20%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.informacion-footer p {
+    margin: 2% 0;
 }
