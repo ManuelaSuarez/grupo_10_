@@ -143,8 +143,7 @@ main section p{
     width: 100%;
 }
 
-.footer{
-    height: 100%;
+footer{
     background-color: #333;
 }
 
@@ -154,9 +153,9 @@ main section p{
 
 .logo-footer{
     width: 50%;
-    position: relative;
-    left: 15px;
-    top: 5px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
 }
 
 .logo-footer img{
@@ -167,10 +166,11 @@ main section p{
     text-align: center;
     width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
 footer p{
     text-align: center;
+    margin-top: 10px;
 }
