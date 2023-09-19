@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #63bbf2;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.menu-hamburguesa {
+    width: 32%;
+    text-align: left;
+}
+
+.logo-header {
+    width: 32%;
+    text-align: center;
+}
+
+.menu-perfil {
+    display: none;
+}
+
+.barra-busqueda {
+    width: 32%;
+    text-align: right;
+}
+
+nav {
+    display: none;
+}
+main{
+    background-color: #000 ;
+    color: #fff;
+}
+.formularios{
+    text-align: center;
+    padding: 10px;
+}
+input{
+  width: 50%;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+}
+button{
+    padding: 8px;
+    margin: 7px;
+    background-color: #63bbf2;
+    border: none;
+    border-radius: 12px;
+}
+
+.panel{
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+}
+.olvidaste a{
+    text-decoration: none;
+    color: #63bbf2;
+}
+footer{
+    background-color: #333;
+}
+
+.logo-redes{
+    display: flex;
+}
+
+.logo-footer{
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.logo-footer img{
+    width: 30%;
+}
+
+.redes{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 10px;
+}
