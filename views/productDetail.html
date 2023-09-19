@@ -16,13 +16,16 @@
             <div class="logo-header">
                 <i class="fas fa-futbol"></i>
             </div>
-            <div class="menu-perfil">
+            <form class="barra-busqueda" action="/" method="GET">
+                <input class="buscador" type="text" placeholder="Buscar" name="buscador" id="buscador">
+                <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="iconoPerfil">
                 <i class="fas fa-user-circle"></i>
-                <i class="far fa-heart"></i>
             </div>
-            <div class="barra-busqueda">
-                <i class="fas fa-search"></i>
+            <div class="carritoFavoritos">
                 <i class="fas fa-shopping-cart"></i>
+                <i class="far fa-heart"></i>
             </div>
             <nav>
                 <ul>
@@ -35,28 +38,32 @@
         </header>
         <main>
             <section class="producto">
-                <img class="imagenPrincipal" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto producto">
-                <div class="imagenesMiniatura">
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
+                <div class="imagenes-producto">
+                    <img class="imagenPrincipal" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto producto">
+                    <div class="imagenesMiniatura">
+                        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/02f90f6570a148c1a136af7300dc1ac4_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_21_model.jpg" alt="foto pequeña">
+                        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/75eb292bbfa446aebcbdaf7300dc2382_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_23_hover_model.jpg" alt="foto pequeña">
+                        <img src="https://images.pagina12.com.ar/styles/focal_content_1200x1050/public/2022-12/683419-48362-tri-2520star.jpg?h=9651c94c&itok=3y9IqDUes" alt="foto pequeña">
+                        <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/282132a9483a49be8b31af7300dc0dd3_9366/Camiseta_titular_Argentina_3_estrellas_2022_Blanco_IB3593_42_detail.jpg" alt="foto pequeña">
+                    </div>
                 </div>
-                <h4>Camiseta de Argentina</h4>
-                <p>$ 100000</p>
-                <div class="talles">
-                    <button type="submit" value="S">S</button>
-                    <button type="submit" value="M">M</button>
-                    <button type="submit" value="L">L</button>
-                    <button type="submit" value="XL">XL</button>
-                </div>
-                <a href="#">Guía de talles</a>
-                <div class="botonesCompra">
-                    <button type="submit">Añadir al carrito</button>
-                    <button type="submit">Comprar ahora</button>
+                <div class="infoGeneral-producto">
+                    <h4>Camiseta de Argentina</h4>
+                    <p>$ 100000</p>
+                    <div class="talles">
+                        <button type="submit" value="S">S</button>
+                        <button type="submit" value="M">M</button>
+                        <button type="submit" value="L">L</button>
+                        <button type="submit" value="XL">XL</button>
+                    </div>
+                    <a href="#">Guía de talles</a>
+                    <div class="botonesCompra">
+                        <button type="submit">Añadir al carrito</button>
+                        <button type="submit">Comprar ahora</button>
+                    </div>
                 </div>
             </section>
-            <section class="informacionProducto">
+            <section class="infoDetallada">
                 <h4>Más información</h4>
                 <ul class="detalles">
                     <li>Ajuste clásico</li>
