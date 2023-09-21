@@ -63,14 +63,14 @@ main{
     text-align: center;
     padding: 10px;
 }
-input{
-  width: 50%;
+main input{
+  width: 80%;
   padding: 5px;
   margin: 5px;
   border: 1px solid #ccc;
   border-radius: 13px;
 }
-button{
+main button{
     padding: 8px;
     margin: 7px;
     background-color: #63bbf2;
@@ -87,34 +87,140 @@ button{
     text-decoration: none;
     color: #63bbf2;
 }
-footer{
+
+footer {
+    display: flex;
+    padding: 5%;
     background-color: #333;
+    color: #fff;
 }
 
-.logo-redes{
+.logo {
+    width: 40%;
+}
+
+.logo i {
+    font-size: 5rem;
+}
+
+.informacion-footer {
+    width: 60%;
+}
+
+.redes {
     display: flex;
+    margin-bottom: 4%;
 }
 
-.logo-footer{
-    width: 50%;
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
-}
-
-.logo-footer img{
-    width: 30%;
-}
-
-.redes{
+.redes a {
+    width: 20%;
+    font-size: 1.5rem;
+    color: #fff;
     text-align: center;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-footer p{
-    text-align: center;
-    margin-top: 10px;
+.informacion-footer p {
+    margin: 2% 0;
+}
+
+@media (min-width: 769px) {
+    header {
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2%
+    }
+
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .logo-header {
+        width: 10%;
+        font-size: 4rem;
+    }
+
+    .barra-busqueda {
+        width: 40%;
+        order: 2;
+    }
+
+    .barra-busqueda input {
+        width: 90%;
+    }
+
+    .barra-busqueda button {
+        width: 10%
+    }
+
+    .iconoPerfil {
+        width: 4%;
+        order: 3;
+        font-size: 1.5rem;
+    }
+
+    .carritoFavoritos {
+        display: inline-block;
+        width: 6%;
+        order: 4;
+        text-align: right;
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        display: inline-block;
+        width: 40%;
+        order: 1;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 20%;
+    }
+
+    nav ul li a {
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        color: #000;
+    }
+
+    .formularios {
+        display: flex;
+    }
+
+    main {
+        padding-bottom: 10%;
+    }
+
+    main form {
+        width: 50%;
+    }
+
+    main input{
+        width: 70%;
+    }
+
+    main button {
+        width: 20%;
+    }
+
+    .logo i {
+        font-size: 8rem;
+    }
+    
+    .redes {
+        margin-bottom: 7%;
+    }
+
+    .redes a {
+        font-size: 2rem;
+    }
+
+    .informacion-footer p {
+        font-size: 1.5rem;
+    }
 }
