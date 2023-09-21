@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Roboto:wght@300;400&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+header{
+    background-color: #63bbf2;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+.menu-hamburguesa{
+    width: 30%;
+    text-align: left;
+}
+
+.logo-header{
+    width: 39%;
+    text-align: center;
+}
+
+.carritoFavoritos{
+    display: none;
+}
+
+.barra-busqueda{
+    width: 25%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    border-bottom: #333 solid 1px;
+}
+
+.barra-busqueda input{
+    width: 70%;
+    background-color: #63bbf2;
+    border: none;
+}
+
+.barra-busqueda button {
+    width: 30%;
+    background-color: #63bbf2;
+    border: none;
+}
+
+.iconoPerfil {
+    width: 6%;
+    text-align: right;
+}
+
+nav {
+    display: none;
+}
+
+main{
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    margin: auto;
+}
+
+.encabezado{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30px;
+    margin: 20px;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+#titulo{ flex-grow: 1 }
+
+#reset{
+    flex-grow: 0;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    margin: 20px;
+    border: solid 1px white;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.img-miniatura{
+    width: 60px;
+    height: 60px;
+    align-items: center;
+}
+
+.menos-mas{
+    width: 3em;
+    height: 1.5em;
+    align-content: center;
+    justify-content: center;
+}
+
+#cantidad{
+    width: 2em;
+    height: 1.5em;
+    text-align: center;
+}
+
+.envio{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    margin: 20px;
+    border: solid 1px white;
+    padding: 5px 10px;
+    align-items: center;
+}
+
+.pago{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80px;
+    margin: 20px;
+    border: solid 1px white;
+    padding: 5px 10px;
+    align-content: center;
+}
+
+#formas-de-pago{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.pie{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 30px;
+    margin: 20px;
+    padding: 5px 10px;
+    justify-content: flex-end;
+}
+
+#comprar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+}
+
+.flechas {
+    display: none;
+}
+
+footer{
+    display: flex;
+    padding: 5%;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo{
+    width: 40%;
+}
+
+.logo i{
+    font-size: 5rem;
+}
+
+.informacion-footer{
+    width: 60%;
+}
+
+.redes{
+    display: flex;
+    margin-bottom: 4%;
+}
+
+.redes a{
+    width: 20%;
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+.informacion-footer p{
+    margin: 2% 0;
+}
+
+@media (min-width: 769px){
+    header{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2%
+    }
+
+    
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .logo-header {
+        width: 10%;
+        font-size: 4rem;
+    }
+
+    .barra-busqueda {
+        width: 40%;
+        order: 2;
+    }
+
+    .barra-busqueda input {
+        width: 90%;
+    }
+
+    .barra-busqueda button {
+        width: 10%
+    }
+
+    .iconoPerfil {
+        width: 4%;
+        order: 3;
+        font-size: 1.5rem;
+    }
+
+    .carritoFavoritos {
+        display: inline-block;
+        width: 6%;
+        order: 4;
+        text-align: right;
+        font-size: 1.5rem;
+    }
+
+    .logo i {
+        font-size: 8rem;
+    }
+    
+    .redes {
+        margin-bottom: 7%;
+    }
+
+    .redes a {
+        font-size: 2rem;
+    }
+
+    .informacion-footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .flechas{
+        position: relative;
+        top: -500px;
+        color: black;
+    }
+
+    .fas.fa-ellipsis-h{
+        color: black;
+    }
+
+    .productos .flechas{
+        color: #fff;
+    }
+    
+    .productos .fas.fa-ellipsis-h{
+        color: #fff;
+    }
+
+    .ingresos{
+        margin-top: 50px;
+    }
+
+    .ingresos p{
+        font-size: 30px;
+    }
+}

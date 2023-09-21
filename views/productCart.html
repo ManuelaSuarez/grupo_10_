@@ -1,124 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>La Tienda del 10</title>
-        <link rel="stylesheet" href="/css/productCart.css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/css/productCart.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div class="menu-hamburguesa">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="logo-header">
-                <i class="fas fa-futbol"></i>
-            </div>
-            <div class="menu-perfil">
-                <i class="fas fa-user-circle"></i>
+      <header>
+        <div class="menu-hamburguesa">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo-header">
+          <i class="fas fa-futbol"></i>
+        </div>
+        <form action="/" method="get" class="barra-busqueda">
+          <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar">
+          <button type="submit" class="lupa"><i class="fa fa-search"></i></button>
+        </form>
+        <div class="iconoPerfil">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <div class="carritoFavoritos">
                 <i class="fas fa-shopping-cart"></i>
                 <i class="far fa-heart"></i>
-            </div>
-            <div class="linea"></div>
-            <div class="barra-busqueda">
-                <i class="fas fa-search"></i>
-                <input type="search" name="barra-busqueda"/>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Redes</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="carrito">
-                <h4>Carrito de compras</h4>
-                <p><button type="reset">Vaciar carrito</button></p>
-                <div>
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <h3><a href="#">Producto</a></h3>
-                    <p>Descripción del producto</p>
-                    <!-- Menú desplegable -->
-                    <label for="cantidad">Cantidad:</label>
-                    <button>-</button><span>1</span><button>+</button>
-                    <!-- Botón de cantidad -->
-                    <p>$******</p>
-                </div>
-                <div>
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <a href="#">Producto</a>
-                    <p>Descripción del producto</p>
-                    <label for="cantidad">Cantidad:</label>
-                    <button>-</button><span>1</span><button>+</button>
-                   <!-- <select name="cantidad" id="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>-->
-                    <p>$******</p>
-                </div>
-                <div>
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña">
-                    <a href="#">Producto</a>
-                    <p>Descripción del producto</p>
-                    <!-- Menú desplegable -->
-                    <label for="cantidad">Cantidad:</label>
-                    <button>-</button><span>1</span><button>+</button>
-                    <!-- Botón de cantidad -->
-                    <p>$******</p>
-                </div>
-                <i class="fas fa-arrow-down"></i>
-            </section>
-            <section class="envio">
-                <h3>Envío</h3>
-                <label for="provincia">Provincia:</label>
-                <select name="provincia" id="provincia">
-                    <option value="Buenos Aires">Buenos Aires</option>
-                    <option value="Capital Federal">Capital Federal</option>
-                    <option value="Córdoba">Córdoba</option>
-                    <option value="Entre Ríos">Entre Ríos</option>
-                    <option value="Santa Fe">Santa Fe</option>
-                </select>
-                <div class="envio-barraBusqueda">
-                    <input placeholder="Ciudad" type="search" name="barra-busqueda"/>
-                </div>
-                <div class="envio-barraBusqueda">
-                    <input placeholder="Código postal" type="search" name="barra-busqueda"/>
-                </div>
-                <p>$******</p>
-            </section>
-            <section class="pago">
-                <h3>Formas de pago</h3>
-                <div>
-                    <input type="radio" name="formaPago" id="credito">Tarjeta de crédito
-                    <input type="radio" name="formaPago" id="debito">Tarjeta de débito
-                    <input type="radio" name="formaPago" id="transferencia">Depósito o transferencia
-                </div>
-                <div>
-                    <h4>Monto total:</h4>
-                    <p>$*****</p>
-                </div>
-            </section>
-            <button type="submit">Comprar</button>
-        <footer>
-            <div class="logo">
-                <img src="" alt="" />
-            </div>
-            <div class="redes">
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-            </div>
-            <p>Preguntas frecuentes</p>
-            <p>Formas de envio</p>
-        </footer>
+        </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Redes</a></li>
+        </ul>
+      </nav>
+      </header>
+      <main>
+        <section class="carrito">
+          <div class="encabezado">
+            <h3 id="titulo">Carrito de compras</h3>
+            <p><button id="reset" classtype="reset">Vaciar carrito</button></p>
+          </div>
+          <div class="producto">
+            <a href="#"><img class="img-miniatura" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTSv1BzUrA6AQKu6KODk3O1YnnH8UyIKcwQ&usqp=CAU" alt="foto pequeña"></a>
+            <p>Camiseta Inter - Talle L</p>
+            <label for="cantidad">Cantidad:</label>
+            <button class="menos-mas">-</button><span id="cantidad">1</span><button class="menos-mas">+</button>
+            <!-- <select name="cantidad" id="cantidad">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              </select>-->
+            <p>$******</p>
+            <i class="fas fa-arrow-down, flechas"></i>
+          </div>
+          <div class="producto">
+            <a href="#"><img class="img-miniatura" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña"></a>
+            <p>Camiseta Argentina - Talle M</p>
+            <label for="cantidad">Cantidad:</label>
+            <button class="menos-mas">-</button><span id="cantidad">1</span><button class="menos-mas">+</button>
+            <!-- <select name="cantidad" id="cantidad">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              </select>-->
+            <p>$******</p>
+            <i class="fas fa-arrow-down, flechas"></i>
+          </div>
+        </section>
+        <section class="envio">
+          <h4>Envío</h4>
+          <label for="provincia">Provincia:</label>
+          <select name="provincia" id="provincia">
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Capital Federal">Capital Federal</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+          </select>
+          <div class="envio-barraBusqueda">
+            <input placeholder="Ciudad" type="search" name="barra-busqueda"/>
+          </div>
+          <div class="envio-barraBusqueda">
+            <input placeholder="Código postal" type="search" name="barra-busqueda"/>
+          </div>
+          <p>$******</p>
+          <i class="fas fa-arrow-down, flechas"></i>
+        </section>
+        <section class="pago">
+          <h4>Formas de pago</h4>
+          <div id="formas-de-pago">
+            <input type="radio" name="formaPago" id="credito">Tarjeta de crédito
+            <input type="radio" name="formaPago" id="debito">Tarjeta de débito
+            <input type="radio" name="formaPago" id="transferencia">Depósito o transferencia
+          </div>
+          <div>
+            <h4>Monto total:</h4>
+            <p>$*****</p>
+          </div class="pie">
+            <i class="fas fa-arrow-down, flechas"></i>
+        </section>
+        <div class="pie">
+          <button id="comprar" type="submit">Comprar</button>
+        </div>
+      </main>
+      <footer>
+        <div class="logo">
+          <i class="fas fa-futbol"></i>
+        </div>
+        <div class="informacion-footer">
+          <div class="redes">
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+          </div>
+          <p>Preguntas frecuentes</p>
+          <p>Formas de envío</p>
+        </div>
+      </footer>
     </body>
 </html>
