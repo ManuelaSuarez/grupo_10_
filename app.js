@@ -10,15 +10,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/productDetail", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/productDetail.html"));
+    res.sendFile(path.join(__dirname, "/views/products/productDetail.html"));
 });
 
 app.get("/productCart", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/productCart.html"));
+    res.sendFile(path.join(__dirname, "/views/products/productCart.html"));
 });
 
 app.get("/login-register", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/login-register.html"));
+    res.sendFile(path.join(__dirname, "/views/users/login-register.html"));
 });
 
 app.listen(port, () => {
