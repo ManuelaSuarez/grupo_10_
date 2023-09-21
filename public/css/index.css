@@ -7,86 +7,69 @@
     font-family: 'Montserrat', sans-serif;;
 }
 
-.top-header{
+header{
+    background-color: #63bbf2;
     display: flex;
-    align-items: center;
-}
-
-header form.barra-busqueda{
-    width: 50%;
-    display: flex;
-}
-
-header .barra-busqueda input{
-    background-color: #FFF;
-    outline: none;
-    color: #666;
-    padding: 2px;
-    width: 90%;
-    height: 25px;
-    border: none;
-    border-radius: 3px 0px 0px 3px;
-    font-size: 14px;
-    text-overflow: ellipsis;
-    display: none;
-}
-
-
-header .barra-busqueda i{
-    background-color: #FFF;
-    width: 10%;
-    min-width: 30px;
-    color: #666;
-    text-align: center;
-    padding-top: 3.5px;
-    border: none;
-    border-radius: 0px 3px 3px 0px;
-    display: none;
+    justify-content: center;
+    padding: 3%;
 }
 
 .menu-hamburguesa{
-    width: 20%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 30%;
+    text-align: left;
 }
 
-.carrito-lupa{
-    display: flex;
-    justify-content: center;
-    width: 20%;
-}
-
-.menu-perfil{
-    display: none;
-}
-
-.navbar{
-    display: none;
-}
-
-header{
-    background-color: #63bbf2;
-}
-
-header div.logo-header{
-    width: 100%;
+.logo-header{
+    width: 39%;
     text-align: center;
+}
+
+.carritoFavoritos{
+    display: none;
+}
+
+.barra-busqueda{
+    width: 25%;
+    text-align: right;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    border-bottom: #333 solid 1px;
 }
 
-main section img{
-    width: 100%;
+.barra-busqueda input{
+    width: 70%;
+    background-color: #63bbf2;
+    border: none;
 }
 
-.slider{
-    height: 270px;
+.barra-busqueda button {
+    width: 30%;
+    background-color: #63bbf2;
+    border: none;
+}
+
+.iconoPerfil {
+    width: 6%;
+    text-align: right;
+}
+
+nav {
+    display: none;
+}
+
+main{
+    background-color: #000;
+    color: #fff;
+    padding: 5%;
+    margin: auto;
 }
 
 .banner-img{
-    height: 270px;
+    width: 100%;
+}
+
+.banner-img img{
+    width: 100%;
 }
 
 .fas.fa-ellipsis-h{
@@ -100,13 +83,15 @@ main section img{
 .flechas{
     width: 100%;
     position: relative;
-    top: -160px;
+    top: -135px;
     display: flex;
     justify-content: space-between;
 }
 
 .marcas img{
-    height: 50px;
+    height: 60px;
+    width: 70px;
+    background-color: white;
 }
 
 .marcas{
@@ -133,7 +118,6 @@ main section p{
 }
 
 .productos img{
-    width: 80%;
     border-radius: 40px;
 }
 
@@ -143,34 +127,156 @@ main section p{
     width: 100%;
 }
 
+.productos .flechas{
+    width: 100%;
+    position: relative;
+    top: -135px;
+    display: flex;
+    justify-content: space-between;
+}
+
 footer{
+    display: flex;
+    padding: 5%;
     background-color: #333;
+    color: #fff;
 }
 
-.logo-redes{
-    display: flex;
+.logo{
+    width: 40%;
 }
 
-.logo-footer{
-    width: 50%;
-    display: flex;
-    margin-top: 10px;
-    justify-content: center;
+.logo i{
+    font-size: 5rem;
 }
 
-.logo-footer img{
-    width: 30%;
+.informacion-footer{
+    width: 60%;
 }
 
 .redes{
-    text-align: center;
-    width: 50%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-bottom: 4%;
 }
 
-footer p{
+.redes a{
+    width: 20%;
+    font-size: 1.5rem;
+    color: #fff;
     text-align: center;
-    margin-top: 10px;
+}
+
+.informacion-footer p{
+    margin: 2% 0;
+}
+
+@media (min-width: 769px){
+    header{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2%
+    }
+
+    
+    .menu-hamburguesa {
+        display: none;
+    }
+
+    .logo-header {
+        width: 10%;
+        font-size: 4rem;
+    }
+
+    .barra-busqueda {
+        width: 40%;
+        order: 2;
+    }
+
+    .barra-busqueda input {
+        width: 90%;
+    }
+
+    .barra-busqueda button {
+        width: 10%
+    }
+
+    .iconoPerfil {
+        width: 4%;
+        order: 3;
+        font-size: 1.5rem;
+    }
+
+    .carritoFavoritos {
+        display: inline-block;
+        width: 6%;
+        order: 4;
+        text-align: right;
+        font-size: 1.5rem;
+    }
+    
+    nav {
+        display: inline-block;
+        width: 40%;
+        order: 1;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    nav ul li {
+        width: 20%;
+    }
+
+    nav ul li a {
+        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        color: #000;
+    }
+
+    .logo i {
+        font-size: 8rem;
+    }
+    
+    .redes {
+        margin-bottom: 7%;
+    }
+
+    .redes a {
+        font-size: 2rem;
+    }
+
+    .informacion-footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .flechas{
+        position: relative;
+        top: -500px;
+        color: black;
+    }
+
+    .fas.fa-ellipsis-h{
+        color: black;
+    }
+
+    .productos .flechas{
+        color: #fff;
+    }
+    
+    .productos .fas.fa-ellipsis-h{
+        color: #fff;
+    }
+
+    .ingresos{
+        margin-top: 50px;
+    }
+
+    .ingresos p{
+        font-size: 30px;
+    }
 }
