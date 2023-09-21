@@ -100,19 +100,42 @@ main{
     width: 60px;
     height: 60px;
     align-items: center;
+    margin: 10px;
+}
+
+.descripcion{
+    flex-grow: 1;
+    align-content: center;
+    justify-content: left;
+}
+
+.articulos{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .menos-mas{
+    flex-grow: 0.5;
     width: 3em;
     height: 1.5em;
     align-content: center;
     justify-content: center;
 }
 
-#cantidad{
-    width: 2em;
+.cantidad-articulos{
+    flex-grow: 0.5;
+    width: 3em;
     height: 1.5em;
-    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.precio{
+    display: flex;
+    flex-grow: 0;
+    align-content: flex-end;
+    justify-content: right;
 }
 
 .envio{
