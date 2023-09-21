@@ -127,6 +127,7 @@ main{
     flex-grow: 0.5;
     width: 3em;
     height: 1.5em;
+    text-align: right;
     align-content: center;
     justify-content: center;
 }
