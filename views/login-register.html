@@ -13,30 +13,31 @@
 
 <body>
   <header>
-    <div class="menu-hamburguesa">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="logo-header">
-      <i class="fas fa-futbol"></i>
-    </div>
-    <div class="menu-perfil">
-      <i class="fas fa-user-circle"></i>
-      <i class="fas fa-shopping-cart"></i>
-      <i class="far fa-heart"></i>
-    </div>
-    <div class="linea"></div>
-    <div class="barra-busqueda">
-      <i class="fas fa-search"></i>
-
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
-        <li><a href="#">Redes</a></li>
-      </ul>
-    </nav>
+      <div class="menu-hamburguesa">
+          <i class="fas fa-bars"></i>
+      </div>
+      <div class="logo-header">
+          <i class="fas fa-futbol"></i>
+      </div>
+      <form class="barra-busqueda" action="/" method="GET">
+          <input class="buscador" type="text" placeholder="Buscar" name="buscador" id="buscador">
+          <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="iconoPerfil">
+          <i class="fas fa-user-circle"></i>
+      </div>
+      <div class="carritoFavoritos">
+          <i class="fas fa-shopping-cart"></i>
+          <i class="far fa-heart"></i>
+      </div>
+      <nav>
+          <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Redes</a></li>
+          </ul>
+      </nav>
   </header>
   <main>
     <div class="panel">
@@ -88,20 +89,21 @@
     </section>
   </main>
   <footer>
-    <div class="logo">
-      <img src="" alt="" />
-    </div>
-    <div class="redes">
-      <a href=""><i class="fab fa-instagram"></i></a>
-      <a href=""><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-    </div>
-    <p>Preguntas frecuentes</p>
-    <p>Formas de envio</p>
+      <div class="logo">
+          <i class="fas fa-futbol"></i>
+      </div>
+      <div class="informacion-footer">
+          <div class="redes">
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+          </div>
+          <p>Preguntas frecuentes</p>
+          <p>Formas de envio</p>
+      </div>
   </footer>
-
 </body>
 
 </html>
