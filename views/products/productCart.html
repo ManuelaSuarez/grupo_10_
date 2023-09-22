@@ -37,16 +37,17 @@
       </header>
       <main>
         <section class="carrito">
-          <div class="encabezado">
-            <h3 id="titulo">Carrito de compras</h3>
-            <p><button id="reset" classtype="reset">Vaciar carrito</button></p>
+          <div class="botones">
+            <button id="reset">Vaciar carrito</button>
           </div>
-          <div class="producto">
-            <a href="#"><img class="img-miniatura" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTSv1BzUrA6AQKu6KODk3O1YnnH8UyIKcwQ&usqp=CAU" alt="foto pequeña"></a>
-            <p class="descripcion">Camiseta Inter - Talle L</p>
+            <div class="producto">
+              <div class="tipo-de-producto">
+                <a href="#"><img class="img-miniatura" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña"></a>
+                <p class="descripcion">Camiseta Argentina - Talle L</p>
+              </div>
             <div class="articulos">
-            <label class="cantidad-articulos" for="cantidad-articulos">Cantidad:</label>
-            <button class="menos-mas">-</button><span id="cantidad-articulos">1</span><button class="menos-mas">+</button>
+            <label class="descripcion" for="cantidad-articulos">Cantidad:</label>
+            <button class="menos-mas">-</button><span class="cantidad-articulos">1</span><button class="menos-mas">+</button>
             <!-- <select name="cantidad" id="cantidad">
               <option value="1">1</option>
               <option value="2">2</option>
@@ -54,79 +55,65 @@
               <option value="4">4</option>
               <option value="5">5</option>
               </select>-->
-            <p class="precio">$******</p>
             </div>
-          </div>
-          <div class="producto">
-            <a href="#"><img class="img-miniatura" src="https://assets.adidas.com/images/w_600,f_auto,q_auto/200a528371ff41c09a88aeca001950c3_9366/Camiseta_Titular_Oficial_Argentina_22_Blanco_HB9218_21_model.jpg" alt="foto pequeña"></a>
-            <p class="descripcion">Camiseta Inter - Talle L</p>
-            <div class="articulos">
-            <label class="cantidad-articulos" for="cantidad-articulos">Cantidad:</label>
-            <button class="menos-mas">-</button><span id="cantidad-articulos">1</span><button class="menos-mas">+</button>
-            <!-- <select name="cantidad" id="cantidad">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              </select>-->
             <p class="precio">$******</p>
             <i class="fas fa-arrow-down, flechas"></i>
-            </div>
           </div>
         </section>
         <section class="envio">
-          <h4>Envío</h4>
-          <label for="provincia">Provincia:</label>
-          <select name="provincia" id="provincia">
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Capital Federal">Capital Federal</option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Córdoba">Córdoba</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Ríos">Entre Ríos</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquén">Neuquén</option>
-            <option value="Río Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago del Estero">Santiago del Estero</option>
-            <option value="Tierra del Fuego">Tierra del Fuego</option>
-            <option value="Tucumán">Tucumán</option>
-          </select>
-          <div class="envio-barraBusqueda">
-            <input placeholder="Ciudad" type="search" name="barra-busqueda"/>
+          <div class="tipo-de-envio">
+            <h4>Envío</h4>
+              <label class="descripcion" for="provincia">Provincia:</label>
+              <select class="datos-ubicacion" name="provincia" id="provincia">
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Capital Federal">Capital Federal</option>
+                <option value="Catamarca">Catamarca</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Entre Ríos">Entre Ríos</option>
+                <option value="Formosa">Formosa</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="La Pampa">La Pampa</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Neuquén">Neuquén</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Salta">Salta</option>
+                <option value="San Juan">San Juan</option>
+                <option value="San Luis">San Luis</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="Santiago del Estero">Santiago del Estero</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                <option value="Tucumán">Tucumán</option>
+              </select>
+            <div class="envio-barraBusqueda">
+              <input class="datos-ubicacion" placeholder="Ciudad" type="search" name="barra-busqueda"/>
+            </div>
+            <div class="envio-barraBusqueda">
+              <input class="datos-ubicacion" placeholder="Código postal" type="search" name="barra-busqueda"/>
+            </div>
           </div>
-          <div class="envio-barraBusqueda">
-            <input placeholder="Código postal" type="search" name="barra-busqueda"/>
-          </div>
-          <p>$******</p>
+          <p class="precio">$******</p>
           <i class="fas fa-arrow-down, flechas"></i>
         </section>
         <section class="pago">
-          <h4>Formas de pago</h4>
-          <div id="formas-de-pago">
-            <input type="radio" name="formaPago" id="credito">Tarjeta de crédito
-            <input type="radio" name="formaPago" id="debito">Tarjeta de débito
-            <input type="radio" name="formaPago" id="transferencia">Depósito o transferencia
+          <div class="formas-de-pago">
+            <h4>Formas de pago</h4>
+              <input type="radio" name="formaPago" id="credito">Tarjeta de crédito
+              <input type="radio" name="formaPago" id="debito">Tarjeta de débito
+              <input type="radio" name="formaPago" id="transferencia">Depósito o transferencia
           </div>
-          <div>
+          <div class="precio-total">
             <h4>Monto total:</h4>
             <p>$*****</p>
-          </div class="pie">
-            <i class="fas fa-arrow-down, flechas"></i>
+          </div>
+          <i class="fas fa-arrow-down, flechas"></i>
         </section>
-        <div class="pie">
+        <div class="botones">
           <button id="comprar" type="submit">Comprar</button>
         </div>
       </main>

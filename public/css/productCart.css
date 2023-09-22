@@ -77,66 +77,65 @@ main{
 #titulo{ flex-grow: 1 }
 
 #reset{
-    flex-grow: 0;
     width: 100px;
     height: 30px;
     background-color: white;
-    align-content: center;
-    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .producto{
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    margin: 20px;
     border: solid 1px white;
     padding: 5px 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.tipo-de-producto{
+    display: flex;
+    width: 45%;
     align-items: center;
 }
 
 .img-miniatura{
+    display: flex;
     width: 60px;
     height: 60px;
-    align-items: center;
-    margin: 10px;
 }
 
-.descripcion{
-    flex-grow: 1;
-    align-content: center;
-    justify-content: left;
-}
+.descripcion{ padding: 10px }
 
 .articulos{
     display: flex;
-    align-content: center;
-    justify-content: center;
+    justify-content: flex-end;
+    width: 45%;
+    align-items: center;
 }
 
 .menos-mas{
-    flex-grow: 0.5;
     width: 3em;
     height: 1.5em;
-    align-content: center;
-    justify-content: center;
 }
 
 .cantidad-articulos{
-    flex-grow: 0.5;
     width: 3em;
     height: 1.5em;
-    text-align: right;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .precio{
+    width: 10%;
+    text-align: right;
+}
+
+.precio-total{
     display: flex;
-    flex-grow: 0;
-    align-content: flex-end;
-    justify-content: right;
+    width: 20%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .envio{
@@ -144,47 +143,47 @@ main{
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    margin: 20px;
     border: solid 1px white;
     padding: 5px 10px;
+    margin-bottom: 20px;
     align-items: center;
 }
+
+.tipo-de-envio{
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.datos-ubicacion{ margin: 5px }
 
 .pago{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     height: 80px;
-    margin: 20px;
     border: solid 1px white;
     padding: 5px 10px;
+    margin-bottom: 20px;
     align-content: center;
 }
 
-#formas-de-pago{
+.formas-de-pago{
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
+    width: 80%;
+    align-items: center;
 }
 
-.pie{
+.botones{
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 30px;
-    margin: 20px;
-    padding: 5px 10px;
     justify-content: flex-end;
 }
 
 #comprar{
-    display: flex;
-    flex-wrap: wrap;
     width: 100px;
     height: 30px;
     background-color: white;
-    align-content: center;
-    justify-content: center;
+    margin-top: -10px;
 }
 
 .flechas {
