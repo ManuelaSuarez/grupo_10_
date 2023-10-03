@@ -1,43 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La Tienda del 10</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
+  <%- include('partials/head') %>
   <body>
-    <header>
-        <div class="menu-hamburguesa">
-          <i class="fas fa-bars"></i>
-        </div>
-        <div class="logo-header">
-          <i class="fas fa-futbol"></i>
-        </div>
-        <form action="/" method="get" class="barra-busqueda">
-          <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar">
-          <button type="submit" class="lupa"><i class="fa fa-search"></i></button>
-        </form>
-        <div class="iconoPerfil">
-          <i class="fas fa-user-circle"></i>
-        </div>
-        <div class="carritoFavoritos">
-                <i class="fas fa-shopping-cart"></i>
-                <i class="far fa-heart"></i>
-        </div>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
-          <li><a href="#">Redes</a></li>
-        </ul>
-      </nav>
-    </header>
+    <%- include('partials/header') %>
 
     <main>
       <section class="slider">
@@ -95,21 +60,6 @@
       </section>
     </main>
 
-    <footer>
-      <div class="logo">
-        <i class="fas fa-futbol"></i>
-      </div>
-      <div class="informacion-footer">
-        <div class="redes">
-          <a href=""><i class="fab fa-instagram"></i></a>
-          <a href=""><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-        </div>
-        <p>Preguntas frecuentes</p>
-        <p>Formas de envío</p>
-      </div>
-    </footer>
+    <%- include('partials/footer') %>
   </body>
 </html>
