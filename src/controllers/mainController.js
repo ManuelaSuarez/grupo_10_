@@ -10,6 +10,9 @@ const controller = {
     },
     loginRegister(req, res){
         res.render('users/login-register')
+    },
+    productEdit(req, res){
+        res.render('products/productEdit')
     }
 }
 
