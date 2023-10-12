@@ -11,6 +11,9 @@ const controller = {
     loginRegister(req, res){
         res.render('users/login-register')
     },
+    productCreate(req, res){
+        res.render('products/productCreate')
+    },
     productEdit(req, res){
         res.render('products/productEdit')
     }
