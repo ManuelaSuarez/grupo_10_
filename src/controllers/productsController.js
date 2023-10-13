@@ -45,3 +45,5 @@ const controller = {
         res.redirect("/index");
     }
 }
+
+module.exports = controller
