@@ -23,3 +23,11 @@ Qué hicimos bien: facilidad y dinamismo al hacer los ejercicios.
 Qué debemos mejorar: la comunicación y la iniciativa en conjunto.
 
 Qué debemos continuar haciendo: mantener la responsabilidad para hacer las actividades.
+
+## Retrospectiva Sprint 4: ##
+
+Qué hicimos bien: realizar los ejercicios en el tiempo acordado.
+
+Qué debemos mejorar: estar más al día con los contenidos para poder hacer reuniones más seguido.
+
+Qué debemos continuar haciendo: seguir comprometidos con el proyecto.
