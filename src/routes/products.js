@@ -4,13 +4,13 @@ const productsController = require('../controllers/productsController');
 
 const router = express.Router();
 
-// router.get('/products', )
-router.get('/products/create', productsController.create)
-// router.get('/products/:id', )
-// router.post('/products', )
-// router.get('/products/:id/edit', )
-// router.put('/products/:id', )
-// router.delete('/products/:id', )/
+router.get('/', productsController.index)
+router.get('/create', productsController.create)
+router.get('/products/:id', productsController.productDetail)
+router.post('/products', productsController.store)
+router.get('/products/:id/edit', productsController.edit)
+router.put('/products/:id', productsController.productDetail)
+router.delete('/products/:id', productsController.destroy)
 
 
 
