@@ -57,138 +57,47 @@ nav {
     display: none;
 }
 
-main{
+main {
     background-color: #000;
     color: #fff;
     padding: 5%;
     margin: auto;
-}
-
-.encabezado{
     display: flex;
     flex-wrap: wrap;
+}
+
+.producto_carrito {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    height: 30px;
-    margin: 20px;
-    padding: 5px 10px;
-    align-items: center;
 }
 
-#titulo{ flex-grow: 1 }
-
-#reset{
-    width: 100px;
-    height: 30px;
-    background-color: white;
-    margin-bottom: 10px;
+.producto_carrito img {
+    height: 20%;
 }
 
-.producto{
+.envio_carrito {
     display: flex;
     width: 100%;
-    height: 80px;
-    border: solid 1px white;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    align-items: center;
 }
 
-.tipo-de-producto{
+.pago_carrito {
     display: flex;
-    width: 45%;
-    align-items: center;
-}
-
-.img-miniatura{
-    display: flex;
-    width: 60px;
-    height: 60px;
-}
-
-.descripcion{ padding: 10px }
-
-.articulos{
-    display: flex;
-    justify-content: flex-end;
-    width: 45%;
-    align-items: center;
-}
-
-.menos-mas{
-    width: 3em;
-    height: 1.5em;
-}
-
-.cantidad-articulos{
-    width: 3em;
-    height: 1.5em;
-    text-align: center;
-}
-
-.precio{
-    width: 10%;
-    text-align: right;
-}
-
-.precio-total{
-    display: flex;
-    width: 20%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.envio{
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
-    height: 80px;
-    border: solid 1px white;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    align-items: center;
 }
 
-.tipo-de-envio{
-    display: flex;
-    width: 90%;
-    align-items: center;
+.menos-mas_carrito {
+    width: 5%;
+    height: 5%;
 }
 
-.datos-ubicacion{ margin: 5px }
-
-.pago{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 80px;
-    border: solid 1px white;
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    align-content: center;
+.desplegar_carrito {
+    width: 5%;
+    height: 5%;
 }
 
-.formas-de-pago{
-    display: flex;
-    width: 80%;
-    align-items: center;
-}
 
-.botones{
-    display: flex;
-    justify-content: flex-end;
-}
 
-#comprar{
-    width: 100px;
-    height: 30px;
-    background-color: white;
-    margin-top: -10px;
-}
-
-.flechas {
-    display: none;
-}
 
 footer{
     display: flex;
