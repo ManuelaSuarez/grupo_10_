@@ -8,8 +8,11 @@ const controller = {
     productCart(req, res){
         res.render('products/productCart')
     },
-    loginRegister(req, res){
-        res.render('users/login-register')
+    registerGet(req, res){
+        res.render('users/register')
+    },
+    loginGet(req, res){
+        res.render('users/login')
     },
     productCreate(req, res){
         res.render('products/productCreate')
