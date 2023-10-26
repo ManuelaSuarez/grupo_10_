@@ -16,10 +16,10 @@ const controller = {
     productDetail: (req, res) => {
         const products = getProducts()
         const product = products.find( (product) => product.id == req.params.id)
-        res.render("productDetail", { product })
+        res.render("products/productDetail", { product })
     },
     create: (req, res) => {
-        res.render("productCreate");
+        res.render("products/productCreate");
     },
     store: (req, res) => {
         const products = getProducts()
@@ -35,7 +35,7 @@ const controller = {
     edit: (req, res) => {
         const products = getProducts()
         const product = products.find((product) => product.id == req.params.id);
-        res.render("productEdit", { productToEdit: product});
+        res.render("products/productEdit", { productToEdit: product});
     },
     destroy: (req, res) => {
         const products = getProducts();
