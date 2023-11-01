@@ -13,7 +13,7 @@ const controller = {
     index: (req, res) => {
         res.render("index", { products: getProducts() })
     },
-    productDetail: (req, res) => {
+    detail: (req, res) => {
         const products = getProducts()
         const product = products.find( (product) => product.id == req.params.id)
         res.render("products/productDetail", { product })
@@ -30,19 +30,31 @@ const controller = {
         };
         products.push(productToCreate);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect("/index");
+        res.redirect("products/products");
     },
     edit: (req, res) => {
         const products = getProducts()
         const product = products.find((product) => product.id == req.params.id);
         res.render("products/productEdit", { productToEdit: product});
     },
+    update(req, res){
+        const products = getProducts()
+        const indexProduct = products.findIndex(
+            (product) => product.id == req.params.id
+        )
+        products[indexProduct] = {
+            ...products[indexProduct],
+            ...req.body
+        }
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+        res.redirect("/products")
+    },
     destroy: (req, res) => {
         const products = getProducts();
         const indexProduct = products.findIndex((product) => product.id == req.params.id)
         products.splice(indexProduct, 1)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-        res.redirect("/index");
+        res.redirect("products/products");
     }
 }
 
