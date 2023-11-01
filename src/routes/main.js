@@ -6,7 +6,7 @@ const mainController = require('../controllers/mainController');
 const router = express.Router();
 
 router.get('/', mainController.index)
-// router.get('/products', mainController.productos)
+// router.get('/productos', mainController.productos)
 // /router.get('/login-register', usersController.loginRegister)
 
 module.exports = router;

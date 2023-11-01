@@ -12,7 +12,7 @@ router.post('/', productsController.store)
 router.get('/detail/:id', productsController.detail)
 
 router.get('/:id/edit', productsController.edit)
-router.put('/products/:id', productsController.update)
+router.put('/:id', productsController.update)
 
 router.delete('/:id', productsController.destroy)
 
