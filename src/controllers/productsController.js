@@ -11,7 +11,7 @@ function getProducts() {
 
 const controller = {
     index: (req, res) => {
-        res.render("index", { products: getProducts() })
+        res.render("products", { products: getProducts() })
     },
     detail: (req, res) => {
         const products = getProducts()
@@ -30,7 +30,7 @@ const controller = {
         };
         products.push(productToCreate);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect("products/products");
+        res.redirect("/products");
     },
     edit: (req, res) => {
         const products = getProducts()
@@ -54,7 +54,7 @@ const controller = {
         const indexProduct = products.findIndex((product) => product.id == req.params.id)
         products.splice(indexProduct, 1)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-        res.redirect("products/products");
+        res.redirect("/products");
     }
 }
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%-include('../partials/head', {styles: ["products"]}) %>
+<html lang="es">
+    <%-include('partials/head', {styles: ["products"]}) %>
 <body>
-    <%- include('../partials/header') %>
+    <%- include('partials/header') %>
     <div class="container productos">
         <div class="row">
             <div class="col">
@@ -14,12 +14,11 @@
                     <section class="caja-producto">
                         <a href="/products/detail/<%= product.id %>">
                             <figure class="caja-producto-imagen">
-                                <img src="/images/products/<%= product.image %>" alt="imagen del producto">
+                                <img src="/images/products/<%= product.imagenProducto %>" alt="imagen del producto">
                             </figure>
                             <article class="caja-producto-data">
-                                <h2>$ <%= product.price - (product.price * product.discount / 100) %></h2>
-                                <span><%=  product.discount %>% OFF</span>
-								<p><%=  product.name %></p>
+                                <p><%=  product.nombreProducto %></p>
+                                <h2>$ <%= product.precioProducto %></h2>
 								<i class="fas fa-truck"></i>
                             </article>
                         </a>
@@ -28,6 +27,6 @@
                 <% }) %>
         </div>
     </div>
-    <%- include('../partials/footer') %>
+    <%- include('partials/footer') %>
 </body>
 </html>
