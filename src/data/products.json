@@ -452,11 +452,21 @@
   {
     "id": 51,
     "image": "default-image.png",
-    "nombreProducto": "Camiseta Real Madrid 1",
+    "nombreProducto": "Camiseta Real Madrid 12",
     "descripcionProducto": "Camiseta Titular Real Madrid temporada 2022",
-    "imagenProducto": "",
+    "imagenProducto": "RMCFMZ0127_01_7f8616a0-9006-4c4f.png",
     "categoria": "Equipos internacionales",
     "talles": "XXL",
     "precioProducto": "12567"
+  },
+  {
+    "id": 52,
+    "image": "default-image.png",
+    "nombreProducto": "Camiseta Barcelona ",
+    "descripcionProducto": "Camiseta Barcelona temporada 2022",
+    "imagenProducto": "descarga.jfif",
+    "categoria": "Equipos internacionales",
+    "talles": "XXL",
+    "precioProducto": "15000"
   }
 ]
