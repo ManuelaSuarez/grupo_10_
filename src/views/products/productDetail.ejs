@@ -42,6 +42,10 @@
                     <li>Número de artículo: HT3683</li>
                 </ul>
             </section>
+            <a href="/products/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+							<button type="submit" class="action-button delete">ELIMINAR</button>
+						</form>
         </main>
         <%-include('../partials/footer') %>
     </body>

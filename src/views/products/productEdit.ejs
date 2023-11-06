@@ -26,13 +26,13 @@
                         </select>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required>
+                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required value="<%= productToEdit.talles %>">
                     </div>
                     <div class="form-contenedor-edit">
                         <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required value="<%= productToEdit.precioProducto%>">
                     </div>
                     <div class="form-contenedor-botones-edit">
-                        <button type="submit"><a href="/">Guardar</a></button>
+                        <button type="submit">Guardar</button>
                         <button type="reset">Borrar</button>
                     </div>
                 </form>

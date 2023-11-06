@@ -442,29 +442,10 @@
   },
   {
     "id": 50,
-    "nombre": "felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
-    "descripcion": "vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
-    "imagen": null,
-    "equipo": "pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna",
-    "talles": "XL",
-    "precio": "$94106.99"
-  },
-  {
-    "id": 51,
     "image": "default-image.png",
-    "nombreProducto": "Camiseta Real Madrid 12",
-    "descripcionProducto": "Camiseta Titular Real Madrid temporada 2022",
-    "imagenProducto": "RMCFMZ0127_01_7f8616a0-9006-4c4f.png",
-    "categoria": "Equipos internacionales",
-    "talles": "XXL",
-    "precioProducto": "12567"
-  },
-  {
-    "id": 52,
-    "image": "default-image.png",
-    "nombreProducto": "Camiseta Barcelona ",
-    "descripcionProducto": "Camiseta Barcelona temporada 2022",
-    "imagenProducto": "descarga.jfif",
+    "nombreProducto": "Camiseta Arsenal",
+    "descripcionProducto": "Camiseta original Arsenal FC 2023",
+    "imagenProducto": "jhz2133_f_909dbcbc-f909-4303-9f1d-d2419608b6ed.png",
     "categoria": "Equipos internacionales",
     "talles": "XXL",
     "precioProducto": "15000"
