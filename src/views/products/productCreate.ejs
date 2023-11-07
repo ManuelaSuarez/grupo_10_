@@ -5,17 +5,17 @@
         <%-include('../partials/header') %>
         <main class="">
             <section class="formulario-edit-contenedor">
-                <form class="formulario-edit" action="/products/<%= productToEdit.id %>?_method=PUT" method="post">
-                    <h2 class="titulo-edit">Editar productos</h2>
+                <form class="formulario-edit" action="/products" method="POST">
+                    <h2 class="titulo-edit">Cargar nuevos productos</h2>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required value="<%= productToEdit.nombreProducto %>">
+                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required value="<%= productToEdit.descripcionProducto %>">
+                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required>
                     </div>
                     <div class="form-contenedor-edit">
                         <h4 class="tituloImagen-edit">Imagen del producto</h4>
-                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*" value="<%= productToEdit.imagenProducto %>">
+                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*">
                     </div>
                     <div class="form-contenedor-edit">
                         <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
@@ -26,13 +26,13 @@
                         </select>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required value="<%= productToEdit.talles %>">
+                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required value="<%= productToEdit.precioProducto%>">
+                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required>
                     </div>
                     <div class="form-contenedor-botones-edit">
-                        <button type="submit">Guardar</button>
+                        <button type="submit"><a href="/">Enviar</a></button>
                         <button type="reset">Borrar</button>
                     </div>
                 </form>

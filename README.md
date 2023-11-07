@@ -21,7 +21,7 @@ Soy Manuela Suárez, tengo 19 años y soy de Rosario, Santa Fe. Además de estud
 
 Soy Marcos Tarabella, tengo 20 años soy de Rafaela, Santa fe estudio en desarollo de juegos en la unra en primer año.
 
-### Inspiración en sitios web: ##
+## Inspiración en sitios web: ##
 
 - The Corner Store (https://www.thecornerstore.com.ar/): elegimos este sitio como inspiración para la sección de inicio.
 
