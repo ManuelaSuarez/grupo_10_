@@ -152,6 +152,7 @@ main {
 
 .titulo-pago_carrito {
     font-weight: bold;
+
 }
 
 .metodo-pago_carrito {
@@ -226,7 +227,7 @@ footer{
         flex-wrap: wrap;
         padding: 2%
     }
-   
+
     .menu-hamburguesa {
         display: none;
     }
@@ -280,7 +281,7 @@ footer{
     .menos-mas_carrito {
         width: 40px;
         height: 40px;
-        font-size: 1.7rem;
+        font-size: 1.7rem; 
     }
 
     .cantidad-articulo_carrito {
