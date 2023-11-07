@@ -5,17 +5,17 @@
         <%-include('../partials/header') %>
         <main class="">
             <section class="formulario-edit-contenedor">
-                <form class="formulario-edit" action="/" method="GET">
+                <form class="formulario-edit" action="/products/<%= productToEdit.id %>?_method=PUT" method="post">
                     <h2 class="titulo-edit">Editar productos</h2>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required>
+                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required value="<%= productToEdit.nombreProducto %>">
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required>
+                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required value="<%= productToEdit.descripcionProducto %>">
                     </div>
                     <div class="form-contenedor-edit">
                         <h4 class="tituloImagen-edit">Imagen del producto</h4>
-                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*">
+                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*" value="<%= productToEdit.imagenProducto %>">
                     </div>
                     <div class="form-contenedor-edit">
                         <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
@@ -26,13 +26,13 @@
                         </select>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required>
+                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required value="<%= productToEdit.talles %>">
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required>
+                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required value="<%= productToEdit.precioProducto%>">
                     </div>
                     <div class="form-contenedor-botones-edit">
-                        <button type="submit"><a href="/">Guardar</a></button>
+                        <button type="submit">Guardar</button>
                         <button type="reset">Borrar</button>
                     </div>
                 </form>

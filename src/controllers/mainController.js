@@ -2,11 +2,9 @@ const controller = {
     index(req, res){
         res.render('index')
     },
-    productDetail(req, res){
-        res.render('products/productDetail')
-    },
-    productCart(req, res){
+    cart(req,res){
         res.render('products/productCart')
+
     },
     registerGet(req, res){
         res.render('users/register')
@@ -19,6 +17,7 @@ const controller = {
     },
     productEdit(req, res){
         res.render('products/productEdit')
+
     }
 }
 
