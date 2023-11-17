@@ -31,3 +31,11 @@ Qué hicimos bien: realizar los ejercicios en el tiempo acordado.
 Qué debemos mejorar: estar más al día con los contenidos para poder hacer reuniones más seguido.
 
 Qué debemos continuar haciendo: seguir comprometidos con el proyecto.
+
+## Retrospectiva Sprint 5: ##
+
+Qué hicimos bien:  
+
+Qué debemos mejorar: 
+
+Qué debemos continuar haciendo: 

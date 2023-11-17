@@ -3,30 +3,24 @@
     <%-include('partials/head', {styles: ["products"]}) %>
 <body>
     <%- include('partials/header') %>
-    <div class="container productos">
-        <div class="row">
-            <div class="col">
-                <h2 class="titulo-producto">Todos los productos</h2>
-            </div>
-
+    <main>
+        <h1 class="titulo-producto">Todos los productos</h1>
+        <div class="container_products">
             <% locals.products && products.forEach(product => { %>
-                <div class="col">
                     <section class="caja-producto">
                         <a href="/products/detail/<%= product.id %>">
                             <figure class="caja-producto-imagen">
                                 <img src="/images/products/<%= product.imagenProducto %>" alt="imagen del producto">
                             </figure>
                             <article class="caja-producto-data">
-                                <p><%=  product.nombreProducto %></p>
-                                <h2>$ <%= product.precioProducto %></h2>
-								<i class="fas fa-truck"></i>
+                                <h2><%=  product.nombreProducto %></h2>
+                                <h3>$ <%= product.precioProducto %></h3>
                             </article>
                         </a>
                     </section>
-                </div>
                 <% }) %>
         </div>
-    </div>
+    </main>
     <%- include('partials/footer') %>
 </body>
 </html>
