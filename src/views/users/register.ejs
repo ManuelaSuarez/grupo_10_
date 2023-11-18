@@ -10,36 +10,54 @@
       <h2>Panel de cuenta</h2>
     </div>
     <section class="formularios">
-      <form action="/" method="GET">
-       
-
-
-      </form>
-      <form action="/" method="GET">
+      <h3>Registrate</h3>
+      <form method="POST" action="/users/register" enctype="multipart/form-data">
         <div>
-        <h3>Registrate</h3>
-      </div>
-        <div>
-          <input placeholder="Nombre" type="text">
+          <input placeholder="Nombre" type="text" name="firstName" class="<%= locals.errors && errors.firstName ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.firstName : null %>" autocomplete="off">
+          <% if(locals.errors && errors.firstName){ %>
+            <div>
+              <%= errors.firstName.msg %>
+            </div>
+            <% } %>
         </div>
         <div>
-          <input placeholder="Apellido" type="text">
+          <input type="text" placeholder="Apellido" name="lastName" class="<%= locals.errors && errors.lastName ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.lastName : null %>" autocomplete="off">
+          <% if(locals.errors && errors.lastName){ %>
+            <div>
+              <%= errors.lastName.msg %>
+            </div>
+            <% } %>
         </div>
         <div>
-          <input placeholder="Correo electrónico" type="email">
+          <input placeholder="Correo electrónico" type="email" name="email" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off">
+          <% if(locals.errors && errors.email) { %>
+            <div>
+              <%= errors.email.msg %>
+            </div>
+         <% }%>
         </div>
         <div>
-          <input placeholder="Contraseña" type="password">
+          <input placeholder="Contraseña" type="password" name="password" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+          <% if (locals.errors && errors.password) { %>
+            <div>
+              <%= errors.password.msg %>
+            </div>
+          <% } %>
         </div>
         <div>
-          <input placeholder="Confirmar contraseña" type="password">
+          <input type="file" accept="image/*" name="avatar" class="<%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
+          <% if (locals.errors && errors.avatar) { %>
+            <div class="text-danger">
+              <%= errors.avatar.msg %>
+            </div>
+          <% } %>
         </div>
         <div>
           <button>Registrarse con Google</button>
           <button type="submit">Registrarse</button>
         </div>
-      </form>
-    </section>
+    </form>
+  </section>
   </main>
   <%-include('../partials/footer') %>
 </body>
