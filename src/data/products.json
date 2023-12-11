@@ -38,5 +38,14 @@
     "categoria": "Equipos nacionales",
     "talles": "M",
     "precioProducto": "3000"
+  },
+  {
+    "id": 55,
+    "nombreProducto": "Camiseta Arsenal",
+    "descripcionProducto": "Camiseta original Arsenal FC 2023",
+    "categoria": "Equipos nacionales",
+    "talles": "XXL",
+    "precioProducto": "1500000",
+    "imagenProducto": "jhz2133_f_909dbcbc-f909-4303-9f1d-d2419608b6ed.png"
   }
 ]
