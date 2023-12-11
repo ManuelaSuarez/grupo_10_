@@ -3,6 +3,7 @@ const fs = require("fs");
 const {get} = require("http");
 const path = require("path");
 const productsFilePath = path.join(__dirname, "../data/products.json");
+const db = require("../database/models");
 
 function getProducts() {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"))
@@ -18,9 +19,21 @@ const controller = {
         const product = products.find( (product) => product.id == req.params.id)
         res.render("products/productDetail", { product })
     },
-    create: (req, res) => {
+    showCreate: (req, res) => {
         res.render("products/productCreate");
     },
+    /*create: (req, res) => {
+        db.Product.create({
+            productName: req.body.nombreProducto,
+            description: req.body.descripcionProducto,
+            productImage: req.body.imagenProducto,
+            category_id: req.body.categoria,
+            size_id: req.body.talles,
+            price: req.body.precioProducto
+        });
+        
+        res.redirect("/products");
+    },*/
     store: (req, res) => {
         const products = getProducts()
         const productToCreate = {
