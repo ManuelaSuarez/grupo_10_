@@ -4,7 +4,7 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 const uploadProduct = require('../middlewares/multerProductMiddleware');
 
-router.get('/products', productsController.index)
+router.get('/', productsController.index)
 
 router.get('/create',productsController.create)
 router.post('/', uploadProduct.single('imagenProducto') ,productsController.store)
