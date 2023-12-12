@@ -5,7 +5,7 @@
         <%-include('../partials/header') %>
         <main class="">
             <section class="formulario-edit-contenedor">
-                <form class="formulario-edit" action="/products" method="POST">
+                <form class="formulario-edit" action="/products" method="POST" enctype="multipart/form-data">
                     <h2 class="titulo-edit">Cargar nuevos productos</h2>
                     <div class="form-contenedor-edit">
                         <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required>

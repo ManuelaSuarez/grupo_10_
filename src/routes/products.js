@@ -6,8 +6,8 @@ const uploadProduct = require('../middlewares/multerProductMiddleware');
 
 router.get('/products', productsController.index)
 
-router.get('/products/create',productsController.create)
-router.post('/products', productsController.store)
+router.get('/create',productsController.create)
+router.post('/', uploadProduct.single('imagenProducto') ,productsController.store)
 
 router.get('/products/detail/:id', productsController.detail)
 
