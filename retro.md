@@ -34,8 +34,8 @@ Qué debemos continuar haciendo: seguir comprometidos con el proyecto.
 
 ## Retrospectiva Sprint 5: ##
 
-Qué hicimos bien:  
+Qué hicimos bien: entrega del Sprint a tiempo.
 
-Qué debemos mejorar: 
+Qué debemos mejorar: mejorar la organización grupal.
 
-Qué debemos continuar haciendo: 
+Qué debemos continuar haciendo: reuniones previas a la entrega del Sprint para corroborar lo realizado.
