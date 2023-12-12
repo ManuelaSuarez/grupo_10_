@@ -12,6 +12,10 @@ function getProducts() {
 
 const controller = {
     index: (req, res) => {
+        /*db.Product.findAll() 
+            .then((peliculas) => {
+                res.render("products", { products : products })
+            })*/
         res.render("products", { products: getProducts() })
     },
     detail: (req, res) => {
@@ -19,11 +23,11 @@ const controller = {
         const product = products.find( (product) => product.id == req.params.id)
         res.render("products/productDetail", { product })
     },
-    showCreate: (req, res) => {
+    create: (req, res) => {
         res.render("products/productCreate");
     },
-    /*create: (req, res) => {
-        db.Product.create({
+    store: (req, res) => {
+        /*db.Product.create({
             productName: req.body.nombreProducto,
             description: req.body.descripcionProducto,
             productImage: req.body.imagenProducto,
@@ -33,8 +37,7 @@ const controller = {
         });
         
         res.redirect("/products");
-    },*/
-    store: (req, res) => {
+        */
         const products = getProducts()
         const productToCreate = {
           id: products[products.length - 1].id + 1,
@@ -46,11 +49,25 @@ const controller = {
         res.redirect("/products");
     },
     edit: (req, res) => {
+        //res.render("products/productEdit")
         const products = getProducts()
         const product = products.find((product) => product.id == req.params.id);
         res.render("products/productEdit", { productToEdit: product});
     },
     update(req, res){
+        /*db.Product.update({
+            productName: req.body.nombreProducto,
+            description: req.body.descripcionProducto,
+            productImage: req.body.imagenProducto,
+            category_id: req.body.categoria,
+            size_id: req.body.talles,
+            price: req.body.precioProducto
+        }, {
+            where: {id: req.params.id}
+        });
+        
+        res.redirect("/products");
+        */
         const products = getProducts()
         const indexProduct = products.findIndex(
             (product) => product.id == req.params.id
@@ -63,6 +80,11 @@ const controller = {
         res.redirect("/products")
     },
     destroy: (req, res) => {
+        /*db.Product.destroy({
+            where: {id: req.params.id}
+        })
+        res.redirect("/products")
+        */
         const products = getProducts();
         const indexProduct = products.findIndex((product) => product.id == req.params.id)
         products.splice(indexProduct, 1)

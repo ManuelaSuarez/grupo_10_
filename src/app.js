@@ -23,7 +23,9 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(session({
-    secret: process.env.SECRET
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
 }))
 
 app.use('/', mainRoutes)
