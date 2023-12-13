@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
         const ext = path.extname(file.originalname);
         // const filename = path.basename(file.originalname, ext);
         // cb(null, `${filename}-${Date.now()}${ext}`)
-        cb(null, `${file.fieldname}-${Date.now()}${ext}`)
+        cb(null, `product-${Date.now()}${ext}`)
     }
 });
 const uploadProduct = multer({ storage });
