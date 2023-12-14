@@ -53,13 +53,13 @@ const controller = {
         res.redirect("/products");*/
     },
     edit: (req, res) => {
-        //res.render("products/productEdit")
-        const products = getProducts()
+        res.render("products/productEdit", { product:product})
+        /*const products = getProducts()
         const product = products.find((product) => product.id == req.params.id);
-        res.render("products/productEdit", { productToEdit: product});
+        res.render("products/productEdit", { productToEdit: product});*/
     },
     update(req, res){
-        /*db.Product.update({
+        db.Product.update({
             productName: req.body.nombreProducto,
             description: req.body.descripcionProducto,
             productImage: req.body.imagenProducto,
@@ -70,9 +70,8 @@ const controller = {
             where: {id: req.params.id}
         });
         
-        res.redirect("/products");
-        */
-        const products = getProducts()
+        res.redirect("/products/" + req.params.id);
+        /*const products = getProducts()
         const indexProduct = products.findIndex(
             (product) => product.id == req.params.id
         )
@@ -80,20 +79,19 @@ const controller = {
             ...products[indexProduct],
             ...req.body
         }
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))*/
         res.redirect("/products")
     },
     destroy: (req, res) => {
-        /*db.Product.destroy({
+        db.Product.destroy({
             where: {id: req.params.id}
         })
         res.redirect("/products")
-        */
-        const products = getProducts();
+    
+        /*const products = getProducts();
         const indexProduct = products.findIndex((product) => product.id == req.params.id)
         products.splice(indexProduct, 1)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-        res.redirect("/products");
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))*/
     },
     cart(req,res){
         res.render('products/productCart')

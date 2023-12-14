@@ -32,18 +32,12 @@
             </section>
             <section class="infoDetallada">
                 <h4>Más información</h4>
-                <ul class="detalles">
-                    <li>Ajuste clásico</li>
-                    <li>Cuello redondo acanalado con estrellas aplicadas</li>
-                    <li>Tejido de punto doble 100 % poliéster reciclado</li>
-                    <li>Tecnología de absorción AEROREADY</li>
-                    <li>Paneles de malla bajo los brazos</li>
-                    <li>Color del artículo: Eqt Yellow / Mystery Ink</li>
-                    <li>Número de artículo: HT3683</li>
-                </ul>
+                <div class="detalles">
+                    <p><%= products[i].description %></p>
+                </div>
             </section>
-            <a href="/products/<%= product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <a href="/products/<%= products[i].id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%= products[i].id %>/delete?_method=DELETE" method="POST" style="display: inline-flex">
 							<button type="submit" class="action-button delete">ELIMINAR</button>
 						</form>
         </main>

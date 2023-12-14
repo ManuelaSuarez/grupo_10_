@@ -84,7 +84,7 @@ main {
     text-align: center;
 }
 
-.infoDetallada ul {
+.infoDetallada div {
     margin-top: 1%;
     list-style: none;
     font-size: 80%;

@@ -3,9 +3,7 @@ const bcrypt = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const { get } = require('http');
 const path = require('path');
-
-
-const User = require('../models/User');
+const db = require("../database/models")
 
 
 const controller = {
@@ -22,7 +20,7 @@ const controller = {
             });
         }
 
-        let userInDb = User.findByField('email', req.body.email);
+        let userInDb = db.findByField('email', req.body.email);
 
         if(userInDb){
             return res.render('users/register', {
@@ -41,7 +39,7 @@ const controller = {
             avatar: req.file.filename
         }
 
-        let userCreated = User.create(userToCreate)
+        let userCreated = db.create(userToCreate)
 
         return res.redirect('login')
     },
@@ -49,7 +47,7 @@ const controller = {
         return res.render('users/login')
     },
     loginProcess(req, res){
-        let userToLogin = User.findByField('email', req.body.email);
+        let userToLogin = db.findByField('email', req.body.email);
         
         if(userToLogin){
             let isOkThePassWord = bcrypt.compareSync(req.body.password, userToLogin.password);
