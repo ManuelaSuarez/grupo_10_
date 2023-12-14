@@ -39,3 +39,11 @@ Qué hicimos bien: entrega del Sprint a tiempo.
 Qué debemos mejorar: mejorar la organización grupal.
 
 Qué debemos continuar haciendo: reuniones previas a la entrega del Sprint para corroborar lo realizado.
+
+## Retrospectiva Sprint 6: ##
+
+Qué hicimos bien: buena predisposición a la hora de dividirnos las tareas y cumplirlas en tiempo y forma.
+
+Qué debemos mejorar: mejor comunicación y un poco más de organización.
+
+Qué debemos continuar haciendo: hacer más reuniones para ver como vamos avanzando con el proyecto y seguir involucrados.
