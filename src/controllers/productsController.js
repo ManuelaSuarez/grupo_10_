@@ -12,22 +12,26 @@ function getProducts() {
 
 const controller = {
     index: (req, res) => {
-        /*db.Product.findAll() 
-            .then((peliculas) => {
-                res.render("products", { products : products })
-            })*/
-        res.render("products", { products: getProducts() })
+        db.Product.findAll() 
+            .then((products) => {
+                res.render("products", { products : products });
+            });
+        //res.render("products", { products: getProducts() })
     },
     detail: (req, res) => {
-        const products = getProducts()
+        db.Product.findByPk(req.params.id)
+            .then((products) => {
+                res.render("products/productDetail", { products:products })
+            })
+        /*const products = getProducts()
         const product = products.find( (product) => product.id == req.params.id)
-        res.render("products/productDetail", { product })
+        res.render("products/productDetail", { product })*/
     },
     create: (req, res) => {
         res.render("products/productCreate");
     },
     store: (req, res) => {
-        /*db.Product.create({
+        db.Product.create({
             productName: req.body.nombreProducto,
             description: req.body.descripcionProducto,
             productImage: req.body.imagenProducto,
@@ -37,8 +41,8 @@ const controller = {
         });
         
         res.redirect("/products");
-        */
-        const products = getProducts()
+
+        /*const products = getProducts()
         const productToCreate = {
           id: products[products.length - 1].id + 1,
           imagenProducto: req.body.imagenProducto || "default-image.png",
@@ -46,7 +50,7 @@ const controller = {
         };
         products.push(productToCreate);
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-        res.redirect("/products");
+        res.redirect("/products");*/
     },
     edit: (req, res) => {
         //res.render("products/productEdit")

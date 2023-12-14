@@ -5,21 +5,21 @@
     <%- include('partials/header') %>
     <main>
         <h1 class="titulo-producto">Todos los productos</h1>
-        <div class="container_products">
-            <% locals.products && products.forEach(product => { %>
-                    <section class="caja-producto">
-                        <a href="/products/detail/<%= product.id %>">
+        <ul class="container_products">
+            <% for(let i = 0; i < products.length; i++) { %>
+                    <li class="caja-producto">
+                        <a href="/products/detail/<%= products[i].id %>">
                             <figure class="caja-producto-imagen">
-                                <img src="/images/products/<%= product.imagenProducto %>" alt="imagen del producto">
+                                <img src="/images/products/<%= products[i].productImage %>" alt="imagen del producto">
                             </figure>
                             <article class="caja-producto-data">
-                                <h2><%=  product.nombreProducto %></h2>
-                                <h3>$ <%= product.precioProducto %></h3>
+                                <h2><%=  products[i].productName %></h2>
+                                <h3>$ <%= products[i].price %></h3>
                             </article>
                         </a>
-                    </section>
-                <% }) %>
-        </div>
+                    </li>
+            <% } %>
+        </ul>
     </main>
     <%- include('partials/footer') %>
 </body>
