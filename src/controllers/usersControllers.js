@@ -20,7 +20,7 @@ const controller = {
             });
         }
 
-        let userInDb = db.findByField('email', req.body.email);
+        let userInDb = db.User.findByField('email', req.body.email);
 
         if(userInDb){
             return res.render('users/register', {
@@ -39,7 +39,7 @@ const controller = {
             avatar: req.file.filename
         }
 
-        let userCreated = db.create(userToCreate)
+        let userCreated = db.User.create(userToCreate)
 
         return res.redirect('login')
     },
@@ -47,7 +47,7 @@ const controller = {
         return res.render('users/login')
     },
     loginProcess(req, res){
-        let userToLogin = db.findByField('email', req.body.email);
+        let userToLogin = db.User.findByField('email', req.body.email);
         
         if(userToLogin){
             let isOkThePassWord = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -76,7 +76,7 @@ const controller = {
                     msg: 'No se encuentra este email en nuestra base de datos'
                 }
             }
-        });
+        });n
     },
     profile(req, res){
         return res.render('users/profile', {
