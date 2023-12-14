@@ -47,7 +47,11 @@ const controller = {
         return res.render('users/login')
     },
     loginProcess(req, res){
-        let userToLogin = db.User.findByField('email', req.body.email);
+        let userToLogin = db.User.findOne({
+            where: {
+                email: req.body.email
+            }
+        });
         
         if(userToLogin){
             let isOkThePassWord = bcrypt.compareSync(req.body.password, userToLogin.password);
