@@ -20,13 +20,20 @@
                     <div class="form-contenedor-edit">
                         <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
                         <select class="categorias" name="categoria" id="categoria">
-                            <option value="Equipos nacionales">Equipos nacionales</option>
-                            <option value="Equipos internacionales">Equipos internacionales</option>
-                            <option value="Otro">Otro</option>
+                            <option value="">Selecciona una categoria</option>
+                            <% locals.categories?.forEach(category => { %>
+                                <option value="<%= category.id %>"><%= category.country %></option>
+                            <% }) %>
                         </select>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Talles" type="text" name="talles" id="talles" required>
+                        <label class="tituloTalle-edit" for="talles">Talles:</label>
+                        <select class="talles" name="talles" id="talles">
+                            <option value="">Selecciona un talle</option>
+                            <% locals.sizes?.forEach(size => { %>
+                                <option value="<%= size.id %>"><%= size.size %></option>
+                            <% }) %>
+                        </select>
                     </div>
                     <div class="form-contenedor-edit">
                         <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required>

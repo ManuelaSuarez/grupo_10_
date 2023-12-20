@@ -27,8 +27,10 @@ const controller = {
         const product = products.find( (product) => product.id == req.params.id)
         res.render("products/productDetail", { product })*/
     },
-    create: (req, res) => {
-        res.render("products/productCreate");
+    create: async (req, res) => {
+        const categories = await db.ProductCategory.findAll()
+        const sizes = await db.Size.findAll()
+        res.render("products/productCreate", {categories, sizes});
     },
     store: (req, res) => {
         db.Product.create({
