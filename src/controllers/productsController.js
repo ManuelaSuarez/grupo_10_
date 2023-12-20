@@ -32,11 +32,11 @@ const controller = {
     },
     store: (req, res) => {
         db.Product.create({
-            productName: req.body.nombreProducto,
+            name: req.body.nombreProducto,
             description: req.body.descripcionProducto,
-            productImage: req.body.imagenProducto,
-            category_id: req.body.categoria,
-            size_id: req.body.talles,
+            image: req.body.imagenProducto,
+            product_categories_id: req.body.categoria,
+            sizes_id: req.body.talles,
             price: req.body.precioProducto
         });
         
@@ -60,11 +60,11 @@ const controller = {
     },
     update(req, res){
         db.Product.update({
-            productName: req.body.nombreProducto,
+            name: req.body.nombreProducto,
             description: req.body.descripcionProducto,
-            productImage: req.body.imagenProducto,
-            category_id: req.body.categoria,
-            size_id: req.body.talles,
+            image: req.body.imagenProducto,
+            product_categories_id: req.body.categoria,
+            sizes_id: req.body.talles,
             price: req.body.precioProducto
         }, {
             where: {id: req.params.id}

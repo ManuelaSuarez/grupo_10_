@@ -9,11 +9,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
+      first_name: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      lastName: {
+      last_name: {
         allowNull: false,
         unique: true,
         type: Sequelize.STRING
@@ -26,16 +26,16 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      userCategory_id: {
+      roles_id: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'userCategories'
+            tableName: 'roles'
           },
           key: 'id'
         }
       },
-      profilePicture: {
+      profile_picture: {
         allowNull: true,
         type: Sequelize.TEXT
       },

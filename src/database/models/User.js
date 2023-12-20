@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.STRING
     },
-    userCategory_id: {
+    roles_id: {
       type: DataTypes.INTEGER
     },
     profilePicture: {

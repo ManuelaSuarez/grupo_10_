@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      productName: {
+      name: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -17,20 +17,20 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      category_id: {
+      product_categories_id: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'productCategory'
+            tableName: 'product_categories'
           },
           key: 'id'
         }
       },
-      size_id: {
+      sizes_id: {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'size'
+            tableName: 'sizes'
           },
           key: 'id'
         }
@@ -39,7 +39,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DOUBLE
       },
-      productImage: {
+      image: {
         type: Sequelize.TEXT
       },
       createdAt: {

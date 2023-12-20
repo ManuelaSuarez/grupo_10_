@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  UserCategory.init({
-    userType: {
+  Role.init({
+    name: {
       allowNull: false,
       unique: true,
       type: DataTypes.STRING
     },
   }, {
     sequelize,
-    modelName: 'UserCategory',
+    modelName: 'Role',
   });
-  return UserCategory;
+  return Role;
 };
