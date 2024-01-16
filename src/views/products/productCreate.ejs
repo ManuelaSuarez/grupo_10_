@@ -30,7 +30,7 @@
                         <label class="tituloTalle-edit" for="talles">Talles:</label>
                         <select class="talles" name="talles" id="talles">
                             <option value="">Selecciona un talle</option>
-                            <% locals.sizes?.forEach(size => { %>
+                            <% locals.sizes?.forEach(sizes => { %>
                                 <option value="<%= sizes.id %>"><%= sizes.size %></option>
                             <% }) %>
                         </select>
