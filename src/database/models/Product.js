@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Product.init({
-    productName: {
+    name: {
       allowNull: false,
       type: DataTypes.STRING
     },
@@ -22,17 +22,17 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.TEXT
     },
-    category_id: {
+    product_categories_id: {
       type: DataTypes.INTEGER
     },
-    size_id: {
+    sizes_id: {
       type: DataTypes.INTEGER
     },
     price: {
       allowNull: false,
       type: DataTypes.DOUBLE
     },
-    productImage: {
+    image: {
       type: DataTypes.TEXT
     }
   }, {

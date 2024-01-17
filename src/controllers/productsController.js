@@ -20,8 +20,8 @@ const controller = {
     },
     detail: (req, res) => {
         db.Product.findByPk(req.params.id)
-            .then((products) => {
-                res.render("products/productDetail", { products:products })
+            .then((product) => {
+                res.render("products/productDetail", { product })
             })
         /*const products = getProducts()
         const product = products.find( (product) => product.id == req.params.id)
@@ -36,7 +36,7 @@ const controller = {
         db.Product.create({
             name: req.body.nombreProducto,
             description: req.body.descripcionProducto,
-            image: req.body.imagenProducto,
+            image: req.file?.filename || 'default-image.png',
             product_categories_id: req.body.categoria,
             sizes_id: req.body.talles,
             price: req.body.precioProducto
@@ -54,8 +54,14 @@ const controller = {
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect("/products");*/
     },
-    edit: (req, res) => {
-        res.render("products/productEdit", { product:product})
+    edit: async (req, res) => {
+        const categories = await db.ProductCategory.findAll()
+        const sizes = await db.Size.findAll()
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                res.render("products/productEdit", { product:product, categories, sizes})
+            })
+
         /*const products = getProducts()
         const product = products.find((product) => product.id == req.params.id);
         res.render("products/productEdit", { productToEdit: product});*/
@@ -64,7 +70,7 @@ const controller = {
         db.Product.update({
             name: req.body.nombreProducto,
             description: req.body.descripcionProducto,
-            image: req.body.imagenProducto,
+            image: req.file?.filename || 'default-image.png',
             product_categories_id: req.body.categoria,
             sizes_id: req.body.talles,
             price: req.body.precioProducto
@@ -72,7 +78,7 @@ const controller = {
             where: {id: req.params.id}
         });
         
-        res.redirect("/products/" + req.params.id);
+
         /*const products = getProducts()
         const indexProduct = products.findIndex(
             (product) => product.id == req.params.id
