@@ -1,45 +1,47 @@
 const fs = require('fs');
 const path = require('path');
 const usersDataFilePath = path.join(__dirname, '../data/users.json')
+const { DataTypes } = require('sequelize');
+const db = require('../database/models');
 
 
 const User = {
-    getData: function(){
+    async getData(){
         return JSON.parse(fs.readFileSync(usersDataFilePath, 'utf-8'))
     },
-    generateId: function(){
-        let allUsers = this.findAll();
+    async generateId(){
+        let allUsers = await this.findAll();
         let lastUser = allUsers.pop();
         if(lastUser){
             return lastUser.id + 1;
         }
         return 1;
     },
-    findAll: function(){
+    async findAll(){
         return this.getData();
     },
-    findByPk: function(id){
-        let allUsers = this.findAll();
+    async findByPk(id){
+        let allUsers = await this.findAll();
         let userFound = allUsers.find(oneUser => oneUser.id === id)
         return userFound;
     },
-    findByField: function(field, text){
-        let allUsers = this.findAll();
+    async findByField(field, text){
+        let allUsers = await this.findAll();
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
     },
-    create: function(userData){
-        let allUsers = this.findAll();
+    async create(userData){
+        let allUsers = await this.findAll();
         let newUser = {
-            id: this.generateId(),
+            id: await this.generateId(),
             ...userData
         }
         allUsers.push(newUser);
         fs.writeFileSync(usersDataFilePath, JSON.stringify(allUsers, null, ' '));
         return newUser;
     },
-    delete: function(id){
-        let allUsers = this.findAll();
+    async delete(id){
+        let allUsers = await this.findAll();
         let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
         fs.writeFileSync(usersDataFilePath, JSON.stringify(finalUsers, null, ' '));
         return true;

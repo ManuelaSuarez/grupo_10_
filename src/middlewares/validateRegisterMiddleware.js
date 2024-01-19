@@ -2,8 +2,8 @@ const path = require('path');
 const {body} = require('express-validator');
 
 module.exports = [
-    body('firstName').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('lastName').notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('first_name').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('last_name').notEmpty().withMessage('Tienes que escribir un apellido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
     body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico').bail().isEmail().withMessage('Debes escribir un formato de correo válido'),
     body('avatar').custom((value, {req}) => {

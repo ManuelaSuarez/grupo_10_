@@ -9,7 +9,8 @@ const controller = {
   register(req, res) {
     res.render("users/register");
   },
-  processRegister(req, res) {
+  async processRegister(req, res) {
+    try{
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
@@ -19,7 +20,7 @@ const controller = {
       });
     }
 
-    let userInDb = db.User.findOne({ where: { email: req.body.email } });
+    let userInDb = await db.User.findOne({ where: { email: req.body.email } });
 
     if (userInDb) {
       return res.render("users/register", {
@@ -38,15 +39,19 @@ const controller = {
       avatar: req.file.filename,
     };
 
-    let userCreated = db.User.create(userToCreate);
+    let userCreated = await db.User.create(userToCreate);
 
     return res.redirect("login");
-  },
+  } catch(error){
+    console.log(error)
+  }
+},
   login(req, res) {
     return res.render("users/login");
   },
-  loginProcess(req, res) {
-    let userToLogin = db.User.findOne({
+  async loginProcess(req, res) {
+    try{
+    let userToLogin = await db.User.findOne({
       where: {
         email: req.body.email,
       },
@@ -83,7 +88,10 @@ const controller = {
         },
       },
     });
-  },
+  } catch(error){
+    console.log(error)
+  }
+},
   profile(req, res) {
     return res.render("users/profile", {
       user: req.session.userLogged,

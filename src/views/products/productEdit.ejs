@@ -13,16 +13,11 @@
                     <div class="form-contenedor-edit">
                         <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required value="<%= product.description %>">
                     </div>
-                    <div class="form-contenedor-edit">
-                        <h4 class="tituloImagen-edit">Imagen del producto</h4>
-                        <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*" value="<%= product.image %>">
-                    </div>
-                    <div class="form-contenedor-edit">
                         <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
                         <select class="categorias" name="categoria" id="categoria">
                             <option value="">Selecciona una categoria</option>
                             <% locals.categories?.forEach(category => { %>
-                                <option value="<%= category.id %>"><%= category.country %></option>
+                                <option value="<%= category.id %>" <%= product.product_categories_id === category.id ? "selected" : "" %>><%= category.country %></option>
                             <% }) %>
                         </select>
                     </div>
@@ -31,7 +26,7 @@
                         <select class="talles" name="talles" id="talles">
                             <option value="">Selecciona un talle</option>
                             <% locals.sizes?.forEach(sizes => { %>
-                                <option value="<%= sizes.id %>"><%= sizes.size %></option>
+                                <option value="<%= sizes.id %>" <%= product.sizes_id === sizes.id ? "selected" : "" %>><%= sizes.size %></option>
                             <% }) %>
                         </select>
                     </div>

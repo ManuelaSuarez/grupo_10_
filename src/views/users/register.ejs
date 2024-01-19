@@ -13,18 +13,18 @@
       <h3>Registrate</h3>
       <form method="POST" action="/users/register" enctype="multipart/form-data">
         <div>
-          <input placeholder="Nombre" type="text" name="firstName" class="<%= locals.errors && errors.firstName ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.firstName : null %>" autocomplete="off">
-          <% if(locals.errors && errors.firstName){ %>
+          <input placeholder="Nombre" type="text" name="first_name" class="<%= locals.errors && errors.first_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.first_name : null %>" autocomplete="off">
+          <% if(locals.errors && errors.first_name){ %>
             <div>
-              <%= errors.firstName.msg %>
+              <%= errors.first_name.msg %>
             </div>
             <% } %>
         </div>
         <div>
-          <input type="text" placeholder="Apellido" name="lastName" class="<%= locals.errors && errors.lastName ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.lastName : null %>" autocomplete="off">
-          <% if(locals.errors && errors.lastName){ %>
+          <input type="text" placeholder="Apellido" name="last_name" class="<%= locals.errors && errors.last_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.last_name : null %>" autocomplete="off">
+          <% if(locals.errors && errors.last_name){ %>
             <div>
-              <%= errors.lastName.msg %>
+              <%= errors.last_name.msg %>
             </div>
             <% } %>
         </div>

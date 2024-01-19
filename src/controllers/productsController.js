@@ -70,7 +70,6 @@ const controller = {
         db.Product.update({
             name: req.body.nombreProducto,
             description: req.body.descripcionProducto,
-            image: req.file?.filename || 'default-image.png',
             product_categories_id: req.body.categoria,
             sizes_id: req.body.talles,
             price: req.body.precioProducto
