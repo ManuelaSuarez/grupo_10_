@@ -15,7 +15,6 @@ module.exports = {
       },
       last_name: {
         allowNull: false,
-        unique: true,
         type: Sequelize.STRING
       },
       email: {
