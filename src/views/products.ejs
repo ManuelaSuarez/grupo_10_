@@ -5,6 +5,7 @@
     <%- include('partials/header') %>
     <main>
         <h1 class="titulo-producto">Todos los productos</h1>
+        <a href="/products/create" class="link-crear">Crear nuevos productos</a>
         <ul class="container_products">
             <% for(let i = 0; i < products.length; i++) { %>
                     <li class="caja-producto">

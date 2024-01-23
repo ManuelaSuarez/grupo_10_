@@ -51,6 +51,14 @@ header{
     text-align: right;
 }
 
+.link-perfil {
+    color: inherit;
+}
+
+.link-carrito {
+    color: inherit;
+}
+
 nav {
     display: none;
 }
