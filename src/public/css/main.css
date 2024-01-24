@@ -46,6 +46,27 @@ header{
     border: none;
 }
 
+.perfil-menu{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.perfil-menu a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #63bbf2;
+  }
+  
+  .iconoPerfil:hover .perfil-menu {
+    display: block;
+    cursor: pointer;
+  }
+
 .iconoPerfil {
     width: 6%;
     text-align: right;

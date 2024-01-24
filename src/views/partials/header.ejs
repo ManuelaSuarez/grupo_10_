@@ -9,13 +9,25 @@
       <input type="text" name="buscador" id="buscador" class="buscador" placeholder="Buscar">
       <button type="submit" class="lupa"><i class="fa fa-search"></i></button>
     </form>
+    
     <div class="iconoPerfil">
-      <a href="/users/profile" class="link-perfil"><i class="fas fa-user-circle"></i></a>
+      <b href="" class="link-perfil" id="perfilBtn"><i class="fas fa-user-circle"></i></b>
+      <div class="perfil-menu" id="perfilMenu">
+        <% if (locals.isLogged) { %>
+            <a href="/users/profile">Perfil</a>
+            <a href="/users/logout">Cerrar sesión</a>
+          <% } else { %>
+            <a href="/users/login">Loguearse</a>
+            <a href="/users/register">Registrarse</a>
+       <% } %>
+      </div>
     </div>
+
     <div class="carritoFavoritos">
       <a href="/products/productCart" class="link-carrito"><i class="fas fa-shopping-cart"></i></a>
       <i class="far fa-heart"></i>
     </div>
+
   <nav>
     <ul>
       <li><a href="/">Inicio</a></li>
@@ -24,4 +36,6 @@
       <li><a href="#">Redes</a></li>
     </ul>
   </nav>
+
+  <script src="js/perfil.js"></script>
 </header>
