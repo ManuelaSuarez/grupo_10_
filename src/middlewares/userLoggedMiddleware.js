@@ -1,18 +1,26 @@
 const User = require('../models/User');
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
-    let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField('email', emailInCookie);
+    try {
+        const emailInCookie = req.cookies.userEmail;
+        
+        if (emailInCookie) {
+            const userFromCookie = await User.findByField('email', emailInCookie);
+            
+            if (userFromCookie) {
+                req.session.userLogged = userFromCookie;
+            }
+        }
 
-    if(userFromCookie){
-        req.session.userLogged = userFromCookie;
-    }
-
-    if(req.session.userLogged){
-        res.locals.isLogged = true;
-        res.locals.userLogged = req.session.userLogged;
+        if (req.session.userLogged) {
+            res.locals.isLogged = true;
+            res.locals.userLogged = req.session.userLogged;
+        }
+    } catch (error) {
+        // Manejar errores si es necesario
+        console.error('Error en middleware de usuario conectado:', error);
     }
 
     next();

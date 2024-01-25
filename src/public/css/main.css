@@ -60,6 +60,7 @@ header{
     text-decoration: none;
     color: #333;
     background-color: #63bbf2;
+    text-align: center;
   }
   
   .iconoPerfil:hover .perfil-menu {

@@ -31,6 +31,41 @@ main button{
     color: #63bbf2;
 }
 
+.container{
+    background-image: url("https://i0.wp.com/newspack-elsol.s3.amazonaws.com/wp-content/uploads/2022/12/4a5c2d41a97a032bbc2c611fbb6460d10470dab6w.jpg?fit=1920%2C1258&ssl=1");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center;
+
+}
+.container h2{
+    margin-top: 20px;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.perfil img{
+    width: 250px;
+    display: flex;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.email{
+    margin-top: 10px;
+}
+
+.logout{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
 @media (min-width: 769px) {
     .formularios {
         display: flex;
