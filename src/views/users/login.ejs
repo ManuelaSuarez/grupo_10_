@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include('../partials/head', {styles: ["login-register"]}) %>
+  <%-include('../partials/head', {styles: ["login-register"]}) %>
 
-    <body>
-      <%-include('../partials/header') %>
-      <main>
-        <div class="panel">
-          <h2>Panel de cuenta</h2>
-        </div>
-        <section class="formularios">
-          <form method="POST" action="/users/login">
-            <h3>Ingresar</h3>
-            <div>
-              <input placeholder="Correo electrónico" type="email" name="email" id="email">
-              <% if (locals.errors && errors.email) { %>
-                <div>
-                  <%= errors.email.msg %>
-                </div>
-              <% } %>
-            </div>
-            <div>
-              <input placeholder="Contraseña" type="password" name="password" id="password">
-            </div>
-            <div>
-              <button>Ingresar con Google</button>
-              <button type="submit">Iniciar Sesión</button>
-              <input type="checkbox" name="remember_user">Recordar usuario
-            </div>
-            <div class="olvidaste">
-              <a href="register">¿No tienes una cuenta?</a>
-              <br>
+  <body>
+    <%-include('../partials/header') %>
+    <main>
+      <div class="panel">
+        <h2>Panel de cuenta</h2>
+      </div>
+      <section class="formularios">
+        <form method="POST" action="/users/login">
+          <h3>Ingresar</h3>
+          <div>
+            <input
+              placeholder="Correo electrónico"
+              type="email"
+              name="email"
+              id="email"
+            />
+            <% if (locals.errors && errors.email) { %>
+            <div><%= errors.email.msg %></div>
+            <% } %>
+          </div>
+          <div>
+            <input
+              placeholder="Contraseña"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+          <div>
+            <button>Ingresar con Google</button>
+            <button type="submit">Iniciar Sesión</button>
+            <input type="checkbox" name="remember_user" />Recordar usuario
+          </div>
+          <div class="olvidaste">
+            <a href="register">¿No tienes una cuenta?</a>
+            <br />
             <a href="#">¿Olvidaste tu contraseña?</a>
           </div>
-          </form>
-          </section>
-        </main>
-          <%-include('../partials/footer') %>
-</body>
+        </form>
+      </section>
+    </main>
+    <%-include('../partials/footer') %>
+  </body>
 </html>
