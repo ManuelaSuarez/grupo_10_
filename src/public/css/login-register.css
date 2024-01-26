@@ -33,7 +33,6 @@ main button{
 
 .container{
     background-image: url("https://i0.wp.com/newspack-elsol.s3.amazonaws.com/wp-content/uploads/2022/12/4a5c2d41a97a032bbc2c611fbb6460d10470dab6w.jpg?fit=1920%2C1258&ssl=1");
-    /* background-repeat: no-repeat; */
     background-size: cover;
     background-position: center;
 
@@ -66,6 +65,26 @@ main button{
     font-weight: 700;
 }
 
+.botones{
+      margin: 10px;
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+  }
+
+  .boton:hover {
+    background-color: #000;
+    color: #63bbf2;
+  }
+
+  
 @media (min-width: 769px) {
     .formularios {
         display: flex;

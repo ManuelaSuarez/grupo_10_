@@ -10,16 +10,30 @@ h1 {
   text-align: center;
   margin-bottom: 2%;
 }
-
+.botones{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 .link-crear {
   color: #fff;
-  display: block;
-  text-align: center;
+  display: inline-block;
+  padding: 10px 20px; 
+  background-color: #63bbf2;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link-crear:hover {
+  background-color: #000;
+  color: #63bbf2;
 }
 
 .container_products {
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .caja-producto {
@@ -34,6 +48,15 @@ h1 {
 .caja-producto a {
   text-decoration: none;
   color: #fff;
+  text-align: center;
+}
+
+.caja-producto-imagen img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.caja-producto-imagen:hover img {
+  transform: scale(1.1);
 }
 
 img {

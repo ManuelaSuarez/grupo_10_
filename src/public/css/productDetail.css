@@ -9,6 +9,10 @@ main {
     margin-bottom: 15%;
 }
 
+.infoGeneral-producto h2{
+    text-align: center;
+}
+
 .imagenPrincipal {
     width: 100%;
     border-radius: 4%;
@@ -78,6 +82,7 @@ main {
 .infoDetallada {
     padding: 2%;
     border: 3px solid #fff;
+    margin-bottom: 15px;
 }
 
 .infoDetallada h4 {
@@ -88,6 +93,53 @@ main {
     margin-top: 1%;
     list-style: none;
     font-size: 80%;
+}
+
+.detalles{
+    text-align: center;
+}
+
+.detalles p{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.boton-editar {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #63bbf2;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-editar:hover {
+    background-color: #63bbf2;
+    color: #000;
+}
+
+.boton-eliminar {
+    margin-left: 10px;
+    background-color: #000;
+    color: #63bbf2;
+    border-radius: 10px;
+    padding: 8px 16px; 
+    border: none; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.boton-eliminar:hover {
+    background-color: #63bbf2;
+    color: #000;
+}
+
+.form-borrado{
+    display: inline-flex;
+}
+
+.botones{
+    text-align: center;
 }
 
 @media (min-width: 769px) {
