@@ -8,14 +8,29 @@
                 <form class="formulario-edit" action="/products/create" method="POST" enctype="multipart/form-data">
                     <h2 class="titulo-edit">Cargar nuevos productos</h2>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto" required>
+                        <input class="input" placeholder="Nombre del producto" type="text" name="nombreProducto" id="nombreProducto">
+                        <% if(locals.errors?.nombreProducto && errors.nombreProducto){ %>
+                            <div class="mensaje-error">
+                              <%= errors.nombreProducto.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto" required>
+                        <input class="input" placeholder="Descripción del producto" type="text" name="descripcionProducto" id="descripcionProducto">
+                        <% if(locals.errors?.descripcionProducto && errors.descripcionProducto){ %>
+                            <div class="mensaje-error">
+                              <%= errors.descripcionProducto.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-edit">
                         <h4 class="tituloImagen-edit">Imagen del producto</h4>
                         <input type="file" name="imagenProducto" id="imagenProducto" accept="image/*">
+                        <% if(locals.errors?.imagenProducto && errors.imagenProducto){ %>
+                            <div class="mensaje-error">
+                              <%= errors.imagenProducto.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-edit">
                         <label class="tituloCategoria-edit" for="categoria">Categoría:</label>
@@ -25,6 +40,11 @@
                                 <option value="<%= category.id %>"><%= category.country %></option>
                             <% }) %>
                         </select>
+                        <% if(locals.errors?.categoria && errors.categoria){ %>
+                            <div class="mensaje-error">
+                              <%= errors.categoria.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-edit">
                         <label class="tituloTalle-edit" for="talles">Talles:</label>
@@ -34,9 +54,19 @@
                                 <option value="<%= sizes.id %>"><%= sizes.size %></option>
                             <% }) %>
                         </select>
+                        <% if(locals.errors?.talles && errors.talles){ %>
+                            <div class="mensaje-error">
+                              <%= errors.talles.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-edit">
-                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto" required>
+                        <input class="input" placeholder="Precio del producto" type="text" name="precioProducto" id="precioProducto">
+                        <% if(locals.errors?.precioProducto && errors.precioProducto){ %>
+                            <div class="mensaje-error">
+                              <%= errors.precioProducto.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="form-contenedor-botones-edit">
                         <button type="submit">Crear</button>

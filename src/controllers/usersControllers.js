@@ -62,6 +62,7 @@ const controller = {
         req.body.password,
         userToLogin.password
       );
+      
       if (isOkThePassWord) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
@@ -72,6 +73,16 @@ const controller = {
 
         return res.redirect("profile");
       }
+      
+      if(!isOkThePassWord){
+        return res.render('users/login', {
+          errors: {
+            password: {
+              msg: 'La contraseña es incorrecta'
+            }
+          }
+        })
+      }
       return res.render("users/login", {
         errors: {
           email: {
@@ -79,6 +90,19 @@ const controller = {
           },
         },
       });
+    }
+    
+    if(req.body.email === "" && req.body.password === ""){
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Por favor ingrese su correo electronico",
+          },
+          password: {
+            msg: 'Por favor ingrese su contraseña'
+          }
+        },
+      })
     }
 
     return res.render("users/login", {

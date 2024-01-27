@@ -19,7 +19,6 @@ async function userLoggedMiddleware(req, res, next) {
             res.locals.userLogged = req.session.userLogged;
         }
     } catch (error) {
-        // Manejar errores si es necesario
         console.error('Error en middleware de usuario conectado:', error);
     }
 

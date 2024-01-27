@@ -29,6 +29,9 @@
               name="password"
               id="password"
             />
+            <% if (locals.errors && errors.password) { %>
+              <div><%= errors.password.msg %></div>
+              <% } %>
           </div>
           <div class="botones">
             <button class="boton">Ingresar con Google</button>

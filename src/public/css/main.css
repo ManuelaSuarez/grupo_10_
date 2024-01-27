@@ -113,7 +113,32 @@ footer{
     width: 20%;
     font-size: 1.5rem;
     color: #fff;
-    text-align: center;
+    text-align: center;    
+    transition: color 0.3s;
+}
+
+.redes a:hover {
+    color: #ffcc00; 
+}
+
+.redes a:nth-child(1):hover {
+    color: #e4405f;
+}
+
+.redes a:nth-child(2):hover {
+    color: #1877f2; 
+}
+
+.redes a:nth-child(3):hover {
+    color: #25d366;
+}
+
+.redes a:nth-child(4):hover {
+    color: #1da1f2;
+}
+
+.redes a:nth-child(5):hover {
+    color: #ff4500;
 }
 
 .informacion-footer p{
@@ -182,8 +207,13 @@ footer{
     }
 
     nav ul li a {
-        text-decoration: none; /* Elimina el subrayado de los enlaces */
+        text-decoration: none;
         color: #000;
+        transition: color 0.3s ease;
+    }
+
+    nav a:hover{
+        color: #fff;
     }
 
     .logo i {
