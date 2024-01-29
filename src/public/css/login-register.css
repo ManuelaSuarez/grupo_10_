@@ -34,6 +34,10 @@ main button {
   color: #63bbf2;
 }
 
+.olvidaste a:hover{
+  text-decoration: underline;
+}
+
 .container {
   background-image: url("https://i0.wp.com/newspack-elsol.s3.amazonaws.com/wp-content/uploads/2022/12/4a5c2d41a97a032bbc2c611fbb6460d10470dab6w.jpg?fit=1920%2C1258&ssl=1");
   background-size: cover;
@@ -59,12 +63,20 @@ main button {
 
 .email {
   margin-top: 10px;
+  color: #63bbf2;
 }
 
 .logout {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logout:hover{
+  text-decoration: underline;
+  color: #63bbf2;
 }
 
 .botones {
@@ -84,6 +96,16 @@ main button {
 .boton:hover {
   background-color: #000;
   color: #63bbf2;
+}
+
+.mensaje-error {
+  text-align: center;
+  color: #ff0000;
+  font-size: 16px;
+  margin-top: 5px;
+  background-color: #ffecec;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 @media (min-width: 769px) {

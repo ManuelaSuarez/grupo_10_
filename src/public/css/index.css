@@ -96,4 +96,18 @@ main section p{
     .ingresos p{
         font-size: 30px;
     }
+
+    .carrusel-container img:hover{
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    #nombreCamiseta:hover{
+      text-decoration: underline 2px;
+      cursor: pointer;
+    }
+
+    .flechas i:hover{
+      cursor: pointer;
+    }
 }
