@@ -15,7 +15,7 @@
         <div>
           <input placeholder="Nombre" type="text" name="first_name" class="<%= locals.errors && errors.first_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.first_name : null %>" autocomplete="off">
           <% if(locals.errors && errors.first_name){ %>
-            <div>
+            <div class="mensaje-error">
               <%= errors.first_name.msg %>
             </div>
             <% } %>
@@ -23,7 +23,7 @@
         <div>
           <input type="text" placeholder="Apellido" name="last_name" class="<%= locals.errors && errors.last_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.last_name : null %>" autocomplete="off">
           <% if(locals.errors && errors.last_name){ %>
-            <div>
+            <div class="mensaje-error">
               <%= errors.last_name.msg %>
             </div>
             <% } %>
@@ -31,7 +31,7 @@
         <div>
           <input placeholder="Correo electrónico" type="email" name="email" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off">
           <% if(locals.errors && errors.email) { %>
-            <div>
+            <div class="mensaje-error">
               <%= errors.email.msg %>
             </div>
          <% }%>
@@ -39,7 +39,7 @@
         <div>
           <input placeholder="Contraseña" type="password" name="password" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
           <% if (locals.errors && errors.password) { %>
-            <div>
+            <div class="mensaje-error">
               <%= errors.password.msg %>
             </div>
           <% } %>
@@ -47,7 +47,7 @@
         <div>
           <input type="file" accept="image/*" name="avatar" class="<%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
           <% if (locals.errors && errors.avatar) { %>
-            <div class="text-danger">
+            <div class="mensaje-error">
               <%= errors.avatar.msg %>
             </div>
           <% } %>

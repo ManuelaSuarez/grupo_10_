@@ -19,7 +19,7 @@
               id="email"
             />
             <% if (locals.errors && errors.email) { %>
-            <div><%= errors.email.msg %></div>
+            <div class="mensaje-error"><%= errors.email.msg %></div>
             <% } %>
           </div>
           <div>
@@ -30,8 +30,8 @@
               id="password"
             />
             <% if (locals.errors && errors.password) { %>
-              <div><%= errors.password.msg %></div>
-              <% } %>
+            <div class="mensaje-error"><%= errors.password.msg %></div>
+            <% } %>
           </div>
           <div class="botones">
             <button class="boton">Ingresar con Google</button>
