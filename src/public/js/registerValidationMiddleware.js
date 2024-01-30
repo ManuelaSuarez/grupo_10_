@@ -14,17 +14,11 @@ const validateRegistration = (req, res, next) => {
     errors.last_name = { msg: "El apellido debe tener al menos 2 caracteres" };
   }
 
-  if (email == "") {
-    errors.email = { msg: "Tienes que escribir un correo electrónico" };
-  } else {
-    !validator.isEmail(email);
+  if (!validator.isEmail(email)) {
     errors.email = { msg: "El correo electrónico no es válido" };
   }
 
-  if (password == "") {
-    errors.password = { msg: "Tienes que escribir una contraseña" };
-  } else {
-    !validator.isLength(password, { min: 8 });
+  if (!validator.isLength(password, { min: 8 })) {
     errors.password = { msg: "La contraseña debe tener al menos 8 caracteres" };
   }
 
