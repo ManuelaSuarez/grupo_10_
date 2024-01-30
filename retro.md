@@ -47,3 +47,19 @@ Qué hicimos bien: buena predisposición a la hora de dividirnos las tareas y cu
 Qué debemos mejorar: mejor comunicación y un poco más de organización.
 
 Qué debemos continuar haciendo: hacer más reuniones para ver como vamos avanzando con el proyecto y seguir involucrados.
+
+## Retrospectiva Sprint 7: ##
+
+Qué hicimos bien: buena organización y cumplimiento de las tareas.
+
+Qué debemos mejorar: el trabajo en equipo.
+
+Qué debemos continuar haciendo: mantener el compromiso con el trabajo.
+
+## Retrospectiva Sprint 8: ##
+
+Qué hicimos bien:
+
+Qué debemos mejorar:
+
+Qué debemos continuar haciendo:
