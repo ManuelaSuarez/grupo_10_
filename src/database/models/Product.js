@@ -39,5 +39,14 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Product',
   });
+  // Product.associate = function(models){
+  //   Product.belongsToMany(models.ProductCategory, {
+  //     as: 'categorias',
+  //     through: 'product_categories',
+  //     foreignKey: 'product_categories_id',
+  //     timestamps: false,
+  //     onDelete: 'cascade'
+  //   })
+  // }
   return Product;
 };
