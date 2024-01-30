@@ -1,5 +1,5 @@
 <header>
-    <div class="menu-hamburguesa">
+    <div class="menu-hamburguesa" onclick="toggleMenu()">
       <i class="fas fa-bars"></i>
     </div>
     <div class="logo-header">
@@ -11,7 +11,7 @@
     </form>
     
     <div class="iconoPerfil">
-      <b href="" class="link-perfil" id="perfilBtn"><i class="fas fa-user-circle"></i></b>
+      <b  class="link-perfil" id="perfilBtn"><i class="fas fa-user-circle"></i></b>
       <div class="perfil-menu" id="perfilMenu">
         <% if (locals.isLogged) { %>
             <a href="/users/profile">Perfil</a>
@@ -28,7 +28,7 @@
       <i class="far fa-heart"></i>
     </div>
 
-  <nav>
+  <nav class="nav-hidden">
     <ul>
       <li><a href="/">Inicio</a></li>
       <li><a href="/products">Productos</a></li>

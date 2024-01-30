@@ -8,13 +8,15 @@
 header{
     background-color: #63bbf2;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     padding: 3%;
 }
 
 .menu-hamburguesa{
     width: 30%;
     text-align: left;
+    cursor: pointer;
 }
 
 .logo-header{
@@ -49,28 +51,42 @@ header{
 .perfil-menu{
     display: none;
     position: absolute;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    top: 100%;
+    right: 0;
+    background-color: #63bbf2;
+    border: 1px solid #333;
+    text-align: center;
     z-index: 1;
 }
 
-.perfil-menu a {
-    display: block;
-    padding: 5px;
+.perfil-menu a{
+    color: #000;
     text-decoration: none;
-    color: #333;
-    background-color: #63bbf2;
-    text-align: center;
-  }
-  
-  .iconoPerfil:hover .perfil-menu {
+}
+
+.perfil-menu a:hover{
+    color: #fff;
+}
+
+.iconoPerfil:hover .perfil-menu{
     display: block;
-    cursor: pointer;
-  }
+}
+
+.nav-hidden{
+    display: none;
+}
+
+.nav-hidden a{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-hidden a:hover{
+    color: #fff;
+}
 
 .iconoPerfil {
-    width: 6%;
-    text-align: right;
+    position: relative;
 }
 
 .link-perfil {
@@ -152,7 +168,6 @@ footer{
         flex-wrap: wrap;
         padding: 2%
     }
-
     
     .menu-hamburguesa {
         display: none;
@@ -177,7 +192,6 @@ footer{
     }
 
     .iconoPerfil {
-        width: 4%;
         order: 3;
         font-size: 1.5rem;
     }
@@ -190,7 +204,7 @@ footer{
         font-size: 1.5rem;
     }
     
-    nav {
+    .nav-hidden {
         display: inline-block;
         width: 40%;
         order: 1;
@@ -231,4 +245,57 @@ footer{
     .informacion-footer p {
         font-size: 1.5rem;
     }
+
+    .perfil-menu{
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+        right: -60px;
+    }
+    
+    .perfil-menu a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: #333;
+        background-color: #63bbf2;
+        text-align: center;
+      }
+      
+      .iconoPerfil:hover .perfil-menu {
+        display: block;
+        cursor: pointer;
+      }
+
+      .perfil-menu a:hover {
+        background-color: #4285f4; 
+        color: #fff; 
+        transition: background-color 0.3s ease; 
+    }
 }
+
+@media only screen and (max-width: 768px) {
+    .barra-busqueda {
+      width: 50%;
+    }
+  
+    .menu-hamburguesa {
+      width: 15%;
+    }
+  
+    nav ul {
+      text-align: center;
+    }
+  
+    .nav-visible {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 1;
+      top: 60px;
+      background-color: #63bbf2;
+      width: 100%;
+    }
+  }
