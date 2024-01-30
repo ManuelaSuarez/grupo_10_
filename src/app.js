@@ -9,6 +9,9 @@ const mainRoutes = require('./routes/main');
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 
+const productRouterApi = require('./routes/api/productApi');
+const userRouterApi = require('./routes/api/userApi');
+
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 const app = express();
@@ -27,8 +30,11 @@ app.use(session({
 app.use(userLoggedMiddleware)
 
 app.use('/', mainRoutes)
-app.use('/products', productsRouter);
+app.use('/products', productsRouter)
 app.use('/users', usersRouter)
+
+app.use('/api/product', productRouterApi)
+app.use('/api/user', userRouterApi)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

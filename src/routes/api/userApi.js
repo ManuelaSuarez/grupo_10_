@@ -3,5 +3,7 @@ const router = express.Router();
 
 const userControllerApi = require('../controllers/api/userControllerApi');
 
-router.get("api/user", userControllerApi.list)
-router.get("api/user/:id", userControllerApi.show)
+router.get("/", userControllerApi.list)
+router.get("/:id", userControllerApi.show)
+
+module.exports = router;
