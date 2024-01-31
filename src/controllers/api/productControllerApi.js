@@ -5,6 +5,7 @@ module.exports = {
     try {
       const categories = await db.ProductCategory.findAll();
       const count = await db.Product.count();
+      const countCategorias = await db.ProductCategory.count();
 
       const countByCategory = {};
       for (const category of categories) {
@@ -17,7 +18,7 @@ module.exports = {
       }
 
       const products = await db.Product.findAll({
-        attributes: ["id", "name", "description", 'price'],
+        attributes: ["id", "name", "description", 'price', 'image'],
         include: [
           {
             model: db.ProductCategory,
@@ -38,13 +39,15 @@ module.exports = {
         price: product.price,
         categories: product.category,
         size: product.size,
-        detail: `/api/product/${product.id}`,
+        detail: `http://localhost:3000/api/products/${product.id}`,
+        image: product.image
       }));
 
       return res.json({
         count: count,
         countByCategory: countByCategory,
-        products: productsWithDetails
+        products: productsWithDetails,
+        countCategorias: countCategorias
       });
     } catch (error) {
       return res.status(500).json({ error: error.message });
@@ -60,9 +63,12 @@ module.exports = {
         return res.status(404).json({ error: "Producto no encontrado" });
       }
 
-      const image = `../../public/images/products/${product.image}`;
+      const image = product.image;
 
-      return res.json({ product, imagen: image });
+      return res.json({ 
+        product, 
+        image: `http://localhost:3000/images/products/${image}`
+      });
     } catch (error) {
       return res.status(500).json({ error: error.message });
     }

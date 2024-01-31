@@ -6,9 +6,10 @@ module.exports = {
             const users = await db.User.findAll();
             const usuariosDetalle = users.map(user => ({
                 id: user.id,
-                name: user.first_name,
+                first_name: user.first_name,
+                last_name: user.last_name,
                 email: user.email,
-                detail: `/api/user/${user.id}`
+                detail: `/api/users/${user.id}`
             }))
 
             return res.json({

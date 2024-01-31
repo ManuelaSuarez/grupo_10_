@@ -99,3 +99,25 @@ main button {
   padding: 5px;
   border-radius: 5px;
 }
+
+.categorias, .talles{
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.categorias:hover, .talles:hover{
+    border-color: #555;
+}
+
+.tituloCategoria-edit{
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.tituloTalle-edit{
+  font-size: 20px;
+  font-weight: 800;
+}

@@ -10,7 +10,7 @@ const productValidation = require('../public/js/productValidationMiddleware');
 router.get('/', productsController.index)
 
 router.get('/create', authProduct, productsController.create)
-router.post('/create', uploadProduct.single('imagenProducto'),  validations, productsController.store)
+router.post('/create', uploadProduct.single('imagenProducto'),  productValidation.validateProduct,validations, productsController.store)
 
 router.get('/detail/:id', productsController.detail)
 
