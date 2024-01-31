@@ -31,8 +31,10 @@ module.exports = {
       
           return res.json({
             id: user.id,
-            name: user.name,
+            first_name: user.first_name,
+            last_name: user.last_name,
             email: user.email,
+            image: `../../public/images/users/${user.avatar}`
           });
         } catch (error) {
           return res.status(500).json({ error: error.message });
