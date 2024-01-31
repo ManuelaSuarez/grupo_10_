@@ -11,6 +11,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Product.belongsTo(models.ProductCategory, {
+        as: 'category',
+        foreignKey: 'product_categories_id'
+      }),
+      Product.belongsTo(models.Size, {
+        as: 'size',
+        foreignKey: 'sizes_id'
+      })
     }
   }
   Product.init({
@@ -39,14 +47,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Product',
   });
-  // Product.associate = function(models){
-  //   Product.belongsToMany(models.ProductCategory, {
-  //     as: 'categorias',
-  //     through: 'product_categories',
-  //     foreignKey: 'product_categories_id',
-  //     timestamps: false,
-  //     onDelete: 'cascade'
-  //   })
-  // }
   return Product;
 };

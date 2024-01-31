@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   Size.init({
     size: {
       allowNull: false,
-      unique: true,
       type: DataTypes.STRING
     }
   }, {

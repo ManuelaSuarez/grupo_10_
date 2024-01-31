@@ -164,49 +164,6 @@ footer{
 
 
 @media (min-width: 769px){
-    header{
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 2%
-    }
-
-    .menu-hamburguesa {
-        display: none;
-    }
-
-    .logo-header {
-        width: 10%;
-        font-size: 4rem;
-    }
-
-    .barra-busqueda {
-        width: 40%;
-        order: 2;
-    }
-
-    .barra-busqueda input {
-        width: 90%;
-    }
-
-    .barra-busqueda button {
-        width: 10%
-    }
-
-    .iconoPerfil {
-        width: 4%;
-        order: 3;
-        font-size: 1.5rem;
-    }
-
-    .carritoFavoritos {
-        display: inline-block;
-        width: 6%;
-        order: 4;
-        text-align: right;
-        font-size: 1.5rem;
-    }
-
     .vaciar_carrito {
         margin-bottom: 2%;
     }

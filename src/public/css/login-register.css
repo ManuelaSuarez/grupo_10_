@@ -127,4 +127,8 @@ main button {
   main input {
     width: 70%;
   }
+
+  .rememberuser input{
+    width: 5%;
+  }
 }

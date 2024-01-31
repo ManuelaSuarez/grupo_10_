@@ -8,7 +8,7 @@ module.exports = {
                 id: user.id,
                 name: user.first_name,
                 email: user.email,
-                detail: `http://127.0.0.1:3000/api/user/${user.id}`
+                detail: `/api/user/${user.id}`
             }))
 
             return res.json({
@@ -29,13 +29,10 @@ module.exports = {
             return res.status(404).json({ error: 'Usuario no encontrado' });
           }
       
-          const profileImageUrl = `https://127.0.0.1:3000/api/user/${user.id}/avatar`;
-      
           return res.json({
             id: user.id,
             name: user.name,
             email: user.email,
-            profileImageUrl: profileImageUrl
           });
         } catch (error) {
           return res.status(500).json({ error: error.message });

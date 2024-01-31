@@ -16,7 +16,6 @@ module.exports = (sequelize, DataTypes) => {
   ProductCategory.init({
     country: {
       allowNull: false,
-      unique: true,
       type: DataTypes.STRING
     }
   }, {

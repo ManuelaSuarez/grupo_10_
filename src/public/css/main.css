@@ -40,13 +40,22 @@ header{
     width: 70%;
     background-color: #63bbf2;
     border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    color: #333;
 }
 
 .barra-busqueda button {
     width: 30%;
     background-color: #63bbf2;
     border: none;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
 }
+
+.barra-busqueda button:hover {
+    transform: scale(1.1);
+  }
 
 .perfil-menu{
     display: none;
@@ -297,5 +306,6 @@ footer{
       top: 60px;
       background-color: #63bbf2;
       width: 100%;
+      left: 1px;
     }
   }

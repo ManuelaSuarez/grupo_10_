@@ -7,20 +7,14 @@ module.exports = {
       
           const count = products.length;
       
-          const countByCategory = {};
-        //   products.forEach(product => {
-        //     product.product_categories.forEach(category => {
-        //       countByCategory[category] = (countByCategory[category] || 0) + 1;
-        //     });
-        //   });
+          const countByCategory = await db.Product.findAll();
       
-
           const productsWithDetails = products.map(product => ({
             id: product.id,
             name: product.name,
             description: product.description,
             categories: product.categories,
-            detail: `http://127.0.0.1:3000/api/product/${product.id}`
+            detail: `/api/product/${product.id}`
           }));
       
 
@@ -37,8 +31,8 @@ module.exports = {
         try {
           const product = await db.Product.findByPk(req.params.id, {
             include: [
-            //   { model: db.ProductCategory, as: 'categorias' },
-            //   { model: db.Size, as: 'sizes' },
+              "category",
+              "size"
             ],
           });
       
@@ -47,17 +41,7 @@ module.exports = {
           }
       
 
-          const productImageUrl = `https://127.0.0.1:3000/api/product/${product.id}/image`;
-
-          return res.json({
-            id: product.id,
-            name: product.name,
-            description: product.description,     
-            // categories: product.categories.map(category => category.name),
-            // sizes: product.sizes.map(size => size.name),
-
-            imageUrl: productImageUrl
-          });
+          return res.json(product);
         } catch (error) {
           return res.status(500).json({ error: error.message });
         }

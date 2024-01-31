@@ -16,7 +16,6 @@
               placeholder="Correo electrónico"
               type="email"
               name="email"
-              id="email"
             />
             <% if (locals.errors && errors.email) { %>
             <div class="mensaje-error"><%= errors.email.msg %></div>
@@ -27,7 +26,6 @@
               placeholder="Contraseña"
               type="password"
               name="password"
-              id="password"
             />
             <% if (locals.errors && errors.password) { %>
             <div class="mensaje-error"><%= errors.password.msg %></div>
@@ -36,7 +34,10 @@
           <div class="botones">
             <button class="boton">Ingresar con Google</button>
             <button class="boton" type="submit">Iniciar Sesión</button>
-            <input type="checkbox" name="remember_user" />Recordar usuario
+            <div class="rememberuser">
+            <input type="checkbox" id="remember_user" />
+            <label for="remember_user">Recordar usuario</label>
+          </div>
           </div>
           <div class="olvidaste">
             <a href="register">¿No tienes una cuenta?</a>
