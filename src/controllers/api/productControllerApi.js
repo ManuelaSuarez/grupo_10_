@@ -1,4 +1,5 @@
 const db = require("../../database/models");
+const Op = db.Sequelize.Op;
 
 module.exports = {
   list: async (req, res) => {
@@ -39,7 +40,7 @@ module.exports = {
         price: product.price,
         categories: product.category,
         size: product.size,
-        detail: `http://localhost:3000/api/products/${product.id}`,
+        detail: `/api/products/${product.id}`,
         image: product.image
       }));
 
@@ -73,4 +74,15 @@ module.exports = {
       return res.status(500).json({ error: error.message });
     }
   },
+  search: (req, res) => {
+    db.Product
+        .findAll({
+            where: {
+                name: {[Op.like]: '%' + req.query.keyword + '%'}
+            }
+        })
+        .then(products => {
+            return res.status(200).json(products);
+        })
+}
 };

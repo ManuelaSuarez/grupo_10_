@@ -37,6 +37,7 @@ app.use('/users', usersRouter)
 
 app.use('/api/products', productRouterApi)
 app.use('/api/users', userRouterApi)
+app.use('/api', productRouterApi)
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
