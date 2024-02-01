@@ -113,14 +113,21 @@ main button {
   color: #63bbf2;
 }
 
+.contenedor-input-register{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .mensaje-error {
-  text-align: center;
   color: #ff0000;
-  font-size: 16px;
-  margin-top: 5px;
+  font-size: 0.8rem;
+  margin-top: 0.5%;
+  margin-bottom: 1.5%;
   background-color: #ffecec;
-  padding: 5px;
+  padding: 1%;
   border-radius: 5px;
+  width: 80%;
 }
 
 @media (min-width: 769px) {
@@ -145,5 +152,9 @@ main button {
 
   .rememberuser input{
     width: 5%;
+  }
+
+  .mensaje-error{
+    width: 55%;
   }
 }

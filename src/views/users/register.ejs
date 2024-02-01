@@ -12,7 +12,7 @@
     <section class="formularios">
       <h3>Registrate</h3>
       <form method="POST" action="/users/register" enctype="multipart/form-data">
-        <div>
+        <div class="contenedor-input-register">
           <input placeholder="Nombre" type="text" name="first_name" class="<%= locals.errors && errors.first_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.first_name : null %>" autocomplete="off">
           <% if(locals.errors && errors.first_name){ %>
             <div class="mensaje-error">
@@ -20,7 +20,7 @@
             </div>
             <% } %>
         </div>
-        <div>
+        <div class="contenedor-input-register">
           <input type="text" placeholder="Apellido" name="last_name" class="<%= locals.errors && errors.last_name ? 'is-invalid' : null%>" value="<%= locals.oldData ? oldData.last_name : null %>" autocomplete="off">
           <% if(locals.errors && errors.last_name){ %>
             <div class="mensaje-error">
@@ -28,7 +28,7 @@
             </div>
             <% } %>
         </div>
-        <div>
+        <div class="contenedor-input-register">
           <input placeholder="Correo electrónico" type="email" name="email" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>" autocomplete="off">
           <% if(locals.errors && errors.email) { %>
             <div class="mensaje-error">
@@ -36,7 +36,7 @@
             </div>
          <% }%>
         </div>
-        <div>
+        <div class="contenedor-input-register">
           <input placeholder="Contraseña" type="password" name="password" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
           <% if (locals.errors && errors.password) { %>
             <div class="mensaje-error">
@@ -44,7 +44,7 @@
             </div>
           <% } %>
         </div>
-        <div>
+        <div class="contenedor-input-register">
           <input type="file" accept="image/*" name="avatar" class="<%= locals.errors && errors.avatar ? 'is-invalid' : null %>">
           <% if (locals.errors && errors.avatar) { %>
             <div class="mensaje-error">
