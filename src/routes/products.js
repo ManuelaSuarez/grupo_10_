@@ -8,6 +8,7 @@ const authProduct = require('../middlewares/authProductMiddleware');
 const productValidation = require('../public/js/productValidationMiddleware');
 
 router.get('/', productsController.index)
+router.get('/search', productsController.search)
 
 router.get('/create', authProduct, productsController.create)
 router.post('/create', uploadProduct.single('imagenProducto'),  productValidation.validateProduct,validations, productsController.store)

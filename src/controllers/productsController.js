@@ -124,7 +124,23 @@ const controller = {
   },
   cart(req, res) {
     res.render("products/productCart");
-  }
+  },
+  search: async (req, res) => {
+    try {
+        const products = await db.Product.findAll();
+
+        let search = req.query.buscador ? req.query.buscador.toLowerCase().trim() : '';
+        
+        let productSearch = products.filter(product => 
+            product.name.toLowerCase().includes(search)
+        );
+
+        res.render('products/productSearch', { productSearch });
+    } catch (error) {
+        console.error('Error en la búsqueda:', error);
+        res.status(500).send('Error en el servidor');
+    }
+}
 };
 
 module.exports = controller;

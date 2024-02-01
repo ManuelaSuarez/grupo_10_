@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs', {styles: ["products"]}) %>
+    </head>
+    <body>
+        <%- include('../partials/header.ejs') %>
+<main>
+    <section>
+        <h3 class="titulos">Resultados según tu búsqueda:</h3>
+        <ul class="container_products">
+            <% locals.productSearch && productSearch.forEach(productSearch => { %>
+            <li class="caja-producto">
+                <a href="/products/detail/<%= productSearch.id %>">
+                <figure class="caja-producto-imagen">
+                <img src="/images/products/<%= productSearch.image %>" alt="imagen del producto">
+            </figure>
+                <article class="caja-producto-data">
+                    <h2><%= productSearch.name %></h2>
+                    <h3> $<%= productSearch.price %> </h3>
+                </article>
+            </a>
+            </li>
+            <% }) %>
+        </ul>
+    </section> 
+</main>
+<%- include('../partials/footer.ejs') %>
+    </body>
+</html>

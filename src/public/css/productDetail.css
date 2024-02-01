@@ -77,7 +77,15 @@ main {
     border-radius: 4px;
     font-size: 1rem;
     font-weight: bold;
+    transition: background-color 0.3s ease;
+    color: #fff;
 }
+
+.botonesCompra button:hover {
+    background-color: #000;
+    color: #63bbf2;
+    cursor: pointer;
+  }
 
 .infoDetallada {
     padding: 2%;
