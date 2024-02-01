@@ -59,44 +59,7 @@ main section p{
     margin-top: 10px;
 }
 
-.productos{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 275px;
-}
-
-.productos img{
-    border-radius: 40px;
-    height: 275px;
-}
-
-.productos .flechas{
-    width: 100%;
-    position: relative;
-    top: -135px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
 @media (min-width: 1200px){
-    .productos .flechas{
-        color: #fff;
-    }
-    
-    .productos .fas.fa-ellipsis-h{
-        color: #fff;
-    }
-
-    .ingresos{
-        margin-top: 50px;
-    }
-
-    .ingresos p{
-        font-size: 30px;
-    }
-
     .carrusel-container img:hover{
       transform: scale(1.05);
       cursor: pointer;
@@ -104,10 +67,6 @@ main section p{
 
     #nombreCamiseta:hover{
       text-decoration: underline 2px;
-      cursor: pointer;
-    }
-
-    .flechas i:hover{
       cursor: pointer;
     }
 }

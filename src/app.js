@@ -35,13 +35,13 @@ app.use('/', mainRoutes)
 app.use('/products', productsRouter)
 app.use('/users', usersRouter)
 
-app.use((req, res, next) => {
-    res.status(404).render("error404")
-})
-
 app.use('/api/products', productRouterApi)
 app.use('/api/users', userRouterApi)
 app.use('/api', productRouterApi)
+
+app.use((req, res, next) => {
+    res.status(404).render("error404")
+})
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

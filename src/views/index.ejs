@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <%- include('partials/head', {styles: ["index"]}) %>
+  <%- include('partials/head', {styles: ["index", "carrousel"]}) %>
   <body>
     <%- include('partials/header') %>
 
@@ -64,23 +64,27 @@
         </div>
       </section>
 
-      <section class="ingresos">
-        <h3>Últimos ingresos</h3>
-        <div class="productos">
-          <div class="carrusel-container">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlTSv1BzUrA6AQKu6KODk3O1YnnH8UyIKcwQ&usqp=CAU" alt="camiseta1" class="carrusel-item" />
-            <img src="https://www.dexter.com.ar/on/demandware.static/-/Sites-365-dabra-catalog/default/dw7b4801c1/products/PU765713-01/PU765713-01-1.JPG" alt="camiseta2" class="carrusel-item" />
-            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/43b3d5dca79c4970ba7d510045536008_9366/Camiseta_Titular_Boca_Juniors_23-24_Azul_IV1922_01_laydown.jpg" alt="camiseta3" class="carrusel-item" />
-          </div>
-          <div class="flechas">
-            <i class="fas fa-chevron-left" onclick="prevSlide()"></i>
-            <i class="fas fa-chevron-right" onclick="nextSlide()"></i>
-          </div>
-        </div>
-        <p id="nombreCamiseta"></p>
-        <p id="precioCamiseta"></p>
-      </section>
-    
+      <div class="slideshow-container">
+        <% products.forEach((product, index) => { %>
+            <div class="mySlides fade">
+                <a href="products/detail/<%= product.id %>"><img src="/images/products/<%= product.image %>">
+                <div class="text"><%= product.name %></div>
+              </a>
+            </div>
+        <% }); %>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
 
       <script src="js/carrousel.js"></script>
       <script src="js/carrouselMarcas.js"></script>

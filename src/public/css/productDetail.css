@@ -78,11 +78,11 @@ main {
     font-size: 1rem;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    color: #fff;
+    color: #000;
 }
 
 .botonesCompra button:hover {
-    background-color: #000;
+    background-color: #fff;
     color: #63bbf2;
     cursor: pointer;
   }

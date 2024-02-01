@@ -27,6 +27,8 @@ main {
 
 .form-contenedor-edit input {
   width: 100%;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .tituloImagen-edit {
